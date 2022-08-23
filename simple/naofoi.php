@@ -12,7 +12,7 @@
             <a href="#">AQUI</a>
         </nav>
     </header>
-    <form action="function.php" method="get">
+    <form action="function.php" method="post">
        <div>
         <label>Nome: *</label>
        <input type="text" name="f_nome" placeholder="Digite seu nome aqui!" required> 
@@ -21,17 +21,16 @@
         <label>Senha: *</label>
         <input type="password" name="f_senha" placeholder="Coloque a senha aqui!" required>
       </div>
-
-<?php
-$nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
-$senha=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_SPECIAL_CHARS);
-?>
       <div>
-        <input type="submit" name="Submeter" value="Confirmar">
+        <button type="submit" name="b1_enviar" value="Confirmar">Confirmar</button>
       </div>
     </form>
 <?php
-include("naosei.php");
+//$nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
+//$senha=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_SPECIAL_CHARS);
+//include("naosei.php");
+//<input type="submit" name="Submeter" value="Confirmar">
+
 ?>
 </body>
 </html>
