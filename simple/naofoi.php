@@ -27,9 +27,9 @@
     </form>
 <?php
 
-//$nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
-//$senha=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_SPECIAL_CHARS);
-//include("naosei.php");
+$nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
+$senha=filter_input(INPUT_POST,"f_senha",FILTER_SANITIZE_SPECIAL_CHARS);
+include("naosei.php");
 //<input type="submit" name="Submeter" value="Confirmar">
 
 ?>
