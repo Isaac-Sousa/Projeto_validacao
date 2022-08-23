@@ -22,7 +22,8 @@
         <input type="password" name="f_senha" placeholder="Coloque a senha aqui!" required>
       </div>
       <div>
-        <button type="submit" name="b1_enviar" value="Confirmar">Confirmar</button>
+      <input type="submit" name="Submeter" value="Confirmar">
+        
       </div>
     </form>
 <?php
@@ -30,7 +31,7 @@
 $nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
 $senha=filter_input(INPUT_POST,"f_senha",FILTER_SANITIZE_SPECIAL_CHARS);
 include("naosei.php");
-//<input type="submit" name="Submeter" value="Confirmar">
+//<button type="submit" name="b1_enviar" value="Confirmar">Confirmar</button>
 
 ?>
 </body>
