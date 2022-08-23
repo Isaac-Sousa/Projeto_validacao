@@ -12,7 +12,7 @@
             <a href="#">AQUI</a>
         </nav>
     </header>
-    <form action="function.php" method="post">
+    <form action="naosei.php" method="post">
        <div>
         <label>Nome: *</label>
        <input type="text" name="f_nome" placeholder="Digite seu nome aqui!" required> 
@@ -26,6 +26,7 @@
       </div>
     </form>
 <?php
+
 //$nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
 //$senha=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_SPECIAL_CHARS);
 //include("naosei.php");
