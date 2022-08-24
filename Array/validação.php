@@ -28,7 +28,6 @@ if ($senha == count($arrSenha) && $nome == count($arrNome)) {
 
 ?>
 <?php
-//vai commitar agora
 // Bloco substituido pelo ou; or (||)
 //elseif ($senha != "Dev21" && $nome == "Isaac") {//echo "<h2> <script>alert('Usuário ou senha inválidos')</script> </h2> <br>";}
 ?>
