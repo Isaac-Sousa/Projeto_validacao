@@ -12,7 +12,7 @@
     <a href="#">AQUI</a>
   </nav>
 </header>
-<form action="naosei.php" method="post">
+<form action="dados.php" method="post">
   <div>
     <label>Nome: *</label>
     <input type="text" name="f_nome" placeholder="Digite seu nome aqui!" required>
@@ -23,17 +23,12 @@
   </div>
   <div>
     <input type="submit" name="Submeter" value="Confirmar">
-
   </div>
 </form>
 <?php
-
-// TODO - excluir posteriormente
-//$nome=filter_input(INPUT_POST,"f_nome",FILTER_SANITIZE_STRING);
-//$senha=filter_input(INPUT_POST,"f_senha",FILTER_SANITIZE_SPECIAL_CHARS);
-//include("naosei.php");
-//<button type="submit" name="b1_enviar" value="Confirmar">Confirmar</button>
-
+// Ele pede acesso ao dados, caso o requerimento gere o resultado esperado ele vai mostrar os dados, em caso de senha ou user errados, 
+//retorna um aviso e volta para cá e em casos de inexistencia de user um aviso previo e volta pra cá
+//
 ?>
 </body>
 </html>

@@ -11,21 +11,19 @@
 $nome = $_POST["f_nome"];
 $senha = $_POST["f_senha"];
 if ($senha == "Dev21" && $nome == "Isaac") {
-  echo "<h3> <script>alert('OLÁ, seu user é valido')</script> </h3> <br>";
-  include("dados.php");
+  echo "<h2> <script>alert('OLÁ, seu user é valido')</script> </h2> <br>";
 } elseif ($senha == "Dev21" && $nome != "Isaac") {
-  echo "<h3> <script>alert('Usuário ou senha inválidos')</script> </h3> <br>";
+  echo "<h2> <script>alert('Usuário ou senha inválidos')</script> </h2> <br>";
 } elseif ($senha != "Dev21" && $nome == "Isaac") {
-  echo "<h3> <script>alert('Usuário ou senha inválidos')</script> </h3> <br>";
+  echo "<h2> <script>alert('Usuário ou senha inválidos')</script> </h2> <br>";
+  echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/simple/naofoi.php";</script>';
 } elseif ($senha = " " && $nome = " ") {
-
-  echo "<h3> <script>alert('Usuário inexistente')</script> </h3> <br>";
-  echo '<a href="localhost:8888/Projeto_validacao/simple/function.php"></a>';
+  echo "<h2> <script>alert('Usuário inexistente')</script> </h2> <br>";
+  echo "<h2> <script>alert('Logue com um usuário existente!')</script> </h2> <br>";
+  echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/simple/naofoi.php";</script>';
 } else {
-  echo "<h3> <script>alert('Aguardando as informações')</script> </h3> <br>";
+  echo "<h2> <script>alert('Aguardando as informações')</script> </h2> <br>";
 }
-
-
 ?>
 </body>
 </html>
