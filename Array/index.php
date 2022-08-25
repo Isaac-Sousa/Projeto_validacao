@@ -7,6 +7,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
- <a href="informações.php" size="4"><label>Logar</label></a>  
+ <a href="login.php" size="4"><label>Logar</label></a>  
 </body>
 </html>
