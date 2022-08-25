@@ -7,6 +7,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
- <a href="login.php" size="4"><label>Logar</label></a>  
+<div>
+  <a href="login.php" size="4"><label>Login</label>  
+</div>    
+<div>   
+  <a href="cadastro.php" size="4"><label>Cadastrar</label></a>  
+</div>
 </body>
 </html>
