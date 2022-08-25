@@ -22,6 +22,14 @@ try{
    // echo "<b>Linha:</b> ".$ex->getLine()."<br>";
    // echo "<b>Arquivo:</b> ".$ex->getFile()."<br>";
 }
+if(!isset( $_POST['f_nome'], $_POST['f_email'], $_POST['f_senha'], $_POST['f_telefone'])){
+ echo "<script>window('Campos vazios!')</script>";
+ echo "<script>window('Preencha todos os campos!')</script>";
+}elseif(!isset( $_POST['f_nome']) || !isset($_POST['f_email']) || !isset($_POST['f_senha']) || !isset($_POST['f_telefone'])){
+    echo "<script>window('Campo vazio!')</script>";
+    echo "<script>window('Preencha todos os campos!')</script>";
+}
+
 ?>
 
 </body>
