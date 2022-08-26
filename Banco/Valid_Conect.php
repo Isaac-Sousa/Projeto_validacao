@@ -13,23 +13,17 @@
 require_once("conexao.php");
 echo '<script>alert("Conectando ao Banco...")</script>'."<br>";
 try{
-    AbrirConexao();
+    //AbrirConexao();
+    $con = mysqli_connect("localhost","root","root");
+    mysqli_select_db($con,"test_bd");
     echo '<script>alert("Conexão bem sucedida")</script>'."<br>";
-    echo "Bem-vindo(a)";
+
 }catch(Exception $ex ){
     echo '<script>alert("Não foi possível conectar ao banco de dados")</script>';
     //echo "<b>Mensagem:</b> ".$ex->getMessage()."<br>";
    // echo "<b>Linha:</b> ".$ex->getLine()."<br>";
    // echo "<b>Arquivo:</b> ".$ex->getFile()."<br>";
 }
-if(!isset( $_POST['f_nome'], $_POST['f_email'], $_POST['f_senha'], $_POST['f_telefone'])){
- echo "<script>window('Campos vazios!')</script>";
- echo "<script>window('Preencha todos os campos!')</script>";
-}elseif(!isset( $_POST['f_nome']) || !isset($_POST['f_email']) || !isset($_POST['f_senha']) || !isset($_POST['f_telefone'])){
-    echo "<script>window('Campo vazio!')</script>";
-    echo "<script>window('Preencha todos os campos!')</script>";
-}
-
 ?>
 
 </body>

@@ -8,9 +8,6 @@
 </head>
 <body>
 <header>
-  <nav>
-    <a href="#">AQUI</a>
-  </nav>
 </header>
 <form method="post" action="informações.php" >
   <div>
@@ -24,8 +21,11 @@
   <div>
   <button type="submit" value="Submit">Comfirmar</button>
   <button type="reset" value="Reset">Limpar</button>
-
-
+<br>
+<br>
+<nav>
+    <a href="cadastro.html">Cadastrar</a>
+</nav>
   </div>
 </form>
 </body>

@@ -11,7 +11,7 @@
   <a href="login.php" size="4"><label>Login</label>  
 </div>    
 <div>   
-  <a href="cadastro.php" size="4"><label>Cadastrar</label></a>  
+  <a href="cadastro.html" size="4"><label>Cadastrar</label></a>  
 </div>
 </body>
 </html>
