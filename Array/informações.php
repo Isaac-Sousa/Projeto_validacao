@@ -4,9 +4,9 @@
  </head>   
 <body>   
 <?php
-$nome = $_POST['f_nomeR'];
-$email = $POST['f_emailR'];
-$senha =$_POST['f_senhaR'];
+$nome = $_POST['f_nome'];
+$email = $_POST['f_email'];
+$senha =$_POST['f_senha'];
  include_once("array.php");
 if($login == true){
     echo  "<script>alert('Você está autorizado')</script> <br>"; 

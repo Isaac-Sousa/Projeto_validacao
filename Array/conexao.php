@@ -27,20 +27,4 @@ $db_host = '127.0.0.1';
   echo '<br>';
   echo 'Protocol version: '.$mysqli->protocol_version;
  
-
-/*
-TESTE DO TRY CACTH
-function AbrirConexao(){
-$conexao = new PDO ("mysql:host=localhost;dbname=test_bd;charset=utf8","root","root");
-return $conexao;
-}
-$hostdb = 'localhost';
-$userdb = 'root';
-$passdb = 'root'; 
-$db = 'test_db';
-$con = mysqli_connect("localhost","root","root");
-mysqli_select_db($con,"test_bd");
-*/
 ?>
-</body>
-</html>
