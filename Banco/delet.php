@@ -1,18 +1,17 @@
 <?php
 $conn = new mysqli('localhost','root','root','test_bd') or die (mysqli_error($conn));
-if(isset($_POST['Submit'])){
+if(isset($_POST['delet'])){
     $nome = $_POST["f_nome"];
     $email = $_POST["f_email"];
     $senha = $_POST["f_senha"];
-    $duplicate = mysqli_query($mysqli, "SELECT * FROM user WHERE Nome_user = '$nome' OR Email_user = '$email'");
+    $duplicate = mysqli_query($mysqli, "DELETE FROM user WHERE Nome_user = '$nome'");
     if(mysqli_num_rows($duplicate)> 0 ){
       echo "<script>alert('Usuário ou Email já cadastrado!')";}
     else{
-    $conn->query("INSERT INTO user (Nome_user, Email_user, Senha_user) VALUES('$nome','$email','$senha')") OR die($mysqli->error);
+    $conn->query( "DELETE FROM user WHERE Nome_user = '$nome'") OR die($mysqli->error);
     }
     if($conn->query == true){
         echo "<script>alert('Usuer cadastrado!')</script>";
     }
 }
-require 'delet.php';
 ?>

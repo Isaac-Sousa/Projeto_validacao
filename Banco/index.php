@@ -25,7 +25,7 @@
    
   <div>
   <button type="submit" name="Submit" value="submit">Comfirmar</button>
-  <button type="reset" value="Reset">Limpar</button>
+  <button type="submit" name="delet" value="Reset">Limpar</button>
   </div>
 
 
