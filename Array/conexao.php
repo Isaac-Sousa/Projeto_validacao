@@ -1,5 +1,5 @@
 <?php
-/* Validação banco de dados PHPMyAdmin */
+/* Validação banco de dados PHPMyAdmin *//* */
 $db_host = '127.0.0.1';
   $db_user = 'root';
   $db_password = 'root';
@@ -26,5 +26,11 @@ $db_host = '127.0.0.1';
   echo 'Host information: '.$mysqli->host_info;
   echo '<br>';
   echo 'Protocol version: '.$mysqli->protocol_version;
- 
+
 ?>
+<?php
+/*Testando outra conexão
+cansado já.session_start();
+$conn = mysqli_connect("127.0.0.1","root","root","test_bd",8889);*/ 
+?>
+

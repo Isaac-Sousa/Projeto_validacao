@@ -1,6 +1,45 @@
 <?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// apagar depois...
 /* Validação banco de dados PHPMyAdmin */
-$db_host = '127.0.0.1';
+/*$db_host = '127.0.0.1';
   $db_user = 'root';
   $db_password = 'root';
   $db_db = 'test_bd';
@@ -27,9 +66,7 @@ $db_host = '127.0.0.1';
   echo '<br>';
   echo 'Protocol version: '.$mysqli->protocol_version;
  
-
-/*
-TESTE DO TRY CACTH
+            TESTE DO TRY CACTH
 function AbrirConexao(){
 $conexao = new PDO ("mysql:host=localhost;dbname=test_bd;charset=utf8","root","root");
 return $conexao;
