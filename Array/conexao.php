@@ -26,7 +26,7 @@ $db_host = '127.0.0.1';
   echo 'Host information: '.$mysqli->host_info;
   echo '<br>';
   echo 'Protocol version: '.$mysqli->protocol_version;
-
+  echo 'uepa não ta indo';
 ?>
 <?php
 /*Testando outra conexão

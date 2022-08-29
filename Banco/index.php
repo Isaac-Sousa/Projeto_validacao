@@ -9,7 +9,7 @@
 <body>
  <!--Aqui ficará o form de cadastro-->
  <div>
-   <form method="post" action="validação_r.php"> 
+   <form method="POST" action="process.php"> 
    <div>
     <label>Nome: *</label>
     <input type="text" name="f_nome" placeholder="Digite seu nome aqui!" required>
@@ -24,7 +24,7 @@
   </div>
    
   <div>
-  <button type="submit" name="cadastrar" value="submit">Comfirmar</button>
+  <button type="submit" name="Submit" value="submit">Comfirmar</button>
   <button type="reset" value="Reset">Limpar</button>
   </div>
 

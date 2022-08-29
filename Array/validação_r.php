@@ -1,41 +1,29 @@
-
 <html>
- <head>
-    <title>ValidacaoR</title>
- </head>   
-<body>  
+   <head></head>
+<body>   
 <?php
-
-echo "alo";
-$nome = $_POST['f_nome'];
-$email = $_POST['f_email'];
-$senha =$_POST['f_senha'];
-
-echo $nome;
-
-include_once('conexao.php');
-
-   $sql = "INSERT INTO user ('Nome_user', 'Email_user', 'Senha_user') VALUES ('$nome','$email','$senha');";
-//    $sql = "SELECT * FROM user;";
-
-   $result = $mysqli->query($sql);
-   echo "Error: " . $sql . "<br>" . $mysqli->error;
-   $lines = mysqli_affected_rows($mysqli); 
-   echo "<h2> teste <br>";
-   echo $sql;
-   var_dump ($result);
-   if($lines == 1){
-    echo "<h2> <script>alert('Usuário registrado com sucesso')</script> </h2> <br>";
-    // echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/login.php"</script>';
-   }else{
-    echo "<h2> <script>alert('Falha ao registrar')</script> </h2> <br>";
-    // echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/cadastro.html"</script>';
+require 'conexao.php';
+if(isset($_POST["cadastrar"])){
+  $nome = $_POST["f_nome"];
+  $email = $_POST["f_email"];
+  $senha = $_POST["f_senha"];
+  $duplicate = mysqli_query($mysqli, "SELECT * FROM user WHERE Nome_user = '$nome' OR Email_user = '$email'");
+  if(mysqli_num_rows($duplicate)> 0 ){
+    echo "<script>alert('Usuário ou Email já cadastrado!')";
+  }else{
+    if($senha != null){
+     $query = "INSERT INTO 'user' ('Nome_user','Email_user','Senha_user') VALUES('$nome','$email','$senha')";
+     mysqli_query($mysqli,$query);
+     echo "<script>alert('Seu cadastro foi concluido!')";
+  } else{
+     echo "<script>alert('Senha não válida')";
    }
-   $mysqli->close();
-
-  
-  //echo "<h2> <script>alert('Usuário/Senha inválidos ou Inexistentes')</script> </h2> <br>";
-  //echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/cadastro.html"</script>';
-
+ }
+}
+if(!isset($_POST['cadastrar'])){
+   echo "<script>alert('O submit não tá indo')";
+}
+echo "<script>alert('Não ta mandando as variaveis? $nome?')";
 ?>
-</body>  
+</body>
+</html>

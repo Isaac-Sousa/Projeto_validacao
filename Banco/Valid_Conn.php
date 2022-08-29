@@ -9,7 +9,8 @@
 <body>
 
 
-<?php
+<?php 
+// ARQUIVO NÃO USADO
 require_once("conexao.php");
 echo '<script>alert("Conectando ao Banco...")</script>'."<br>";
 try{
