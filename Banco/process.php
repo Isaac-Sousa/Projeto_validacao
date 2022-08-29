@@ -4,7 +4,7 @@ if(isset($_POST['Submit'])){
     $nome = $_POST["f_nome"];
     $email = $_POST["f_email"];
     $senha = $_POST["f_senha"];
-    $duplicate = mysqli_query($mysqli, "SELECT * FROM user WHERE Nome_user = '$nome' OR Email_user = '$email'");
+    $duplicate = mysqli_query($conn, "SELECT * FROM user WHERE Nome_user = '$nome' OR Email_user = '$email'");
     if(mysqli_num_rows($duplicate)> 0 ){
       echo "<script>alert('Usuário ou Email já cadastrado!')";}
     else{
