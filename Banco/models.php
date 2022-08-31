@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Inserir usuários
 function Inserir(){
 	if (isset($_POST['Submit'])) {
@@ -27,20 +28,11 @@ function Deletar(){
 //Selecionar usuários
 //Em desenvolvimento!
 function SelecionarTodos(){
-  if(isset($_POST[''])){
-      $nome = $_POST["f_nome"];
-      $email = $_POST["f_email"];
-      $senha = $_POST["f_senha"];
-      $duplicate = mysqli_query($mysqli, "SELECT * FROM user");
-      if(mysqli_num_rows($duplicate)> 0 ){
-        echo "<script>alert('Encontrando Usuários!')</script>";}
-
-      else{
-      $conn->query( "DELETE FROM user WHERE Nome_user = '$nome'") OR die($mysqli->error);
-      }
-      if($conn->query == true){
-          echo "<script>alert('Usuer cadastrado!')</script>";
-      }
+  $results = mysqli_query($conn, "SELECT * FROM user"); 
+  while ($row = mysqli_fetch_array($results)) {
+  echo $row['Nome_user']."<br>";
+  echo $row['Email_user']."<br>";
+  echo $row['Senha_user']."<br>";
   }
 }
 

@@ -10,20 +10,18 @@
 
 
 <?php 
-// ARQUIVO NÃO USADO
-require_once("conexao.php");
-echo '<script>alert("Conectando ao Banco...")</script>'."<br>";
-try{
-    //AbrirConexao();
-    $con = mysqli_connect("localhost","root","root");
-    mysqli_select_db($con,"test_bd");
-    echo '<script>alert("Conexão bem sucedida")</script>'."<br>";
+$conn = new mysqli('localhost','root','root','test_bd') or die (mysqli_error($conn));
+require('models.php');
+SelecionarTodos();
 
-}catch(Exception $ex ){
-    echo '<script>alert("Não foi possível conectar ao banco de dados")</script>';
-    //echo "<b>Mensagem:</b> ".$ex->getMessage()."<br>";
-   // echo "<b>Linha:</b> ".$ex->getLine()."<br>";
-   // echo "<b>Arquivo:</b> ".$ex->getFile()."<br>";
+$nome = $_POST["f_nome"];
+$email = $_POST["f_email"];
+$senha = $_POST["f_senha"];  
+$results = mysqli_query($conn, "SELECT * FROM user"); 
+while ($row = mysqli_fetch_array($results)) {
+echo $row['Nome_user']."<br>";
+echo $row['Email_user']."<br>";
+echo $row['Senha_user']."<br>";
 }
 ?>
 

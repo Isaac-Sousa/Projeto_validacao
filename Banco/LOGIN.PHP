@@ -12,7 +12,7 @@ require_once'models.php';
 <body>
  <!--Aqui ficará o form de cadastro-->
  <div>
-   <form method="POST" action="process.php"> 
+   <form method="POST" action="Valid_Conn.php"> 
    <div>
     <label>Nome: *</label>
     <input type="text" name="f_nome" placeholder="Digite seu nome aqui!" required>
