@@ -2,19 +2,13 @@
   <head></head>
   <body>
 <?php
-$conn = new mysqli('localhost','root','root','test_bd') or die (mysqli_error($conn));
-$nome = $_POST["f_nome"];
-$email = $_POST["f_email"];
-$senha = $_POST["f_senha"];  
-    
+$confirm = $_POST['Submit'];
 require_once("models.php");
-if(isset($_POST['Submit'])){
- Inserir($conn ,$nome, $email, $senha);
+ Inserir($confirm);
 
-}
-
+require('delet.php');
 if(isset($_POST['delet'])){  
- Deletar($conn, $nome, $email, $senha);
+ Deletar($conn);
 }
  
 
