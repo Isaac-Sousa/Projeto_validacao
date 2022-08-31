@@ -3,9 +3,21 @@
   <body>
 <?php
 $conn = new mysqli('localhost','root','root','test_bd') or die (mysqli_error($conn));
+$nome = $_POST["f_nome"];
+$email = $_POST["f_email"];
+$senha = $_POST["f_senha"];  
+    
 require_once("models.php");
+if(isset($_POST['Submit'])){
+ Inserir($conn ,$nome, $email, $senha);
 
-Inserir();
+}
+
+if(isset($_POST['delet'])){  
+ Deletar($conn, $nome, $email, $senha);
+}
+ 
+
 /*
 if(isset($_POST['Submit'])){
     $nome = $_POST["f_nome"];

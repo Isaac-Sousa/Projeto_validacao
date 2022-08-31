@@ -28,7 +28,7 @@ require_once'models.php';
    
   <div>
   <button type="submit" name="SubmitL" value="submit">Comfirmar</button>
-  <button type="submit" name="delet" value="Reset">Limpar</button>
+  <button type="submit" name="deletl" value="Reset">Limpar</button>
   </div>
 
 
