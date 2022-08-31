@@ -2,15 +2,15 @@
   <head></head>
   <body>
 <?php
-$confirm = $_POST['Submit'];
-require_once("models.php");
- Inserir($confirm);
-
-require('delet.php');
-if(isset($_POST['delet'])){  
- Deletar($conn);
+include_once("models.php");
+if(isset($_POST['Submit'])){ 
+ Inserir();
 }
- 
+include_once('delet.php');
+if(isset($_POST['delet'])){  
+ Deletar();
+}
+include_once 'Valid_Conn.php';
 
 /*
 if(isset($_POST['Submit'])){

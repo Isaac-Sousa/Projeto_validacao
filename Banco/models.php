@@ -17,7 +17,6 @@ function Inserir(){
         echo "<script>alert('User cadastrado!')</script>";    
         }  
 	}
-  include_once 'Valid_Conn.php';
 }
 
 // Deletar usuários
