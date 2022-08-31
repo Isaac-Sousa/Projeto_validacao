@@ -3,6 +3,10 @@
   <body>
 <?php
 $conn = new mysqli('localhost','root','root','test_bd') or die (mysqli_error($conn));
+require_once("models.php");
+
+Inserir();
+/*
 if(isset($_POST['Submit'])){
     $nome = $_POST["f_nome"];
     $email = $_POST["f_email"];
@@ -18,6 +22,7 @@ if(isset($_POST['Submit'])){
   }
 }
 require 'delet.php';
+*/
 ?>
 </body>
 </html>
