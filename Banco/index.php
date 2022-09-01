@@ -14,7 +14,7 @@
   <a href="CADASTRO.PHP" size="4"><label>Cadastrar</label></a>  
 </div>
 <div>
-  <a href="Valid_Conn.php"><label>Verificar usuários</label></a>
+  <a href="USERS.php"><label>Verificar usuários</label></a>
 </div>
 </body>
 </html>
