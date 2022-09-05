@@ -3,18 +3,19 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Azul ou Vermelha?</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Azul ou Vermelha?</title>
 </head>
 <body>
 <div>
-  <a href="LOGIN.PHP" size="4"><label>Login</label>  
+  <a href="LOGIN.PHP" size="4" class="redirect"><label>Login</label>  
 </div>    
 <div>   
-  <a href="CADASTRO.PHP" size="4"><label>Cadastrar</label></a>  
+  <a href="CADASTRO.PHP" size="4" class="redirect"><label>Cadastrar</label></a>  
 </div>
 <div>
-  <a href="USERS.php"><label>Verificar usuários</label></a>
+  <a href="USERS.php" class="redirect"><label>Verificar usuários</label></a>
 </div>
 </body>
 </html>
