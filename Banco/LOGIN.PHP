@@ -34,15 +34,20 @@ require_once'models.php';
     <input type="password" name="f_senha" required class="inputuser"> 
     <label class="Luser">Senha:</label>
   </div>
-  <br><br>
-  <div>
-  <input type="submit" name="SubmitL" id="submit" value="Confirmar"></input>
-  <input type="submit" name="deletl" id="delet" value="Limpar"></input>
+  <br><br> 
+  <div class="button">
+   <button  type="submit" name="enviarL">Enviar</button> 
 </div>
-<h1>Todos os campos são obrigatórios</h1>
+<div class="button2">
+   <button  type="reset" name="deletL">Excluir</button>
+</div>  
+<br>
+   <h1>Todos os campos são obrigatórios</h1>
   </fieldset>
     </form>
 </div>    
+</div>
+
 
 </body>
 </html>

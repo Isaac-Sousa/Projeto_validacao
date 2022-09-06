@@ -21,7 +21,7 @@ if (isset($_POST['Submit'])) {
       echo "<script>alert('User cadastrado!')</script>";    
       }  
 }
-include_once('delet.php');
+require('delet.php');
 
 ?>
 </body>
