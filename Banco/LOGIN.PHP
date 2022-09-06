@@ -6,35 +6,48 @@ require_once'models.php';
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Azul ou Vermelha?</title>
+    <title>Login</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="styleL.css">
 </head>
 <body>
  <!--Aqui ficará o form de cadastro-->
- <div>
+ <div class="caixa"> 
+
    <form method="POST" action="process.php"> 
-   <div>
-    <label>Nome: *</label>
-    <input type="text" name="f_nome" placeholder="Digite seu nome aqui!" required>
-  </div>
-  <div>
-        <label>Email: *</label>
-        <input type="email" name="f_email" placeholder="Insira o seu Email aqui" required>
-    </div> 
-  <div>
-    <label>Senha: *</label>
-    <input type="password" name="f_senha" placeholder="Coloque a senha aqui!" required>
-  </div>
-   
-  <div>
-  <button type="submit" name="SubmitL" value="submit">Comfirmar</button>
-  <button type="submit" name="deletl" value="Reset">Limpar</button>
-  </div>
+     <fieldset>
+      <legend><b>Formulário de Login</b></legend>
+    <br>
 
-
-    </form>
-
-    
+  
+    <div class="inputBox">
+    <input type="text" name="f_nome" required class="inputuser">  
+    <label class="Luser">Nome: </label>
+  </div>
+  <br><br>
+  <div class="inputBox">
+        <input type="text" name="f_email" required class="inputuser">   
+        <label class="Luser">Email: </label>
+    </div>
+    <br><br> 
+  <div class="inputBox">
+    <input type="password" name="f_senha" required class="inputuser"> 
+    <label class="Luser">Senha:</label>
+  </div>
+  <br><br> 
+  <div class="button">
+   <button  type="submit" name="enviarL">Enviar</button> 
 </div>
+<div class="button2">
+   <button  type="reset" name="deletL">Excluir</button>
+</div>  
+<br>
+   <h1>Todos os campos são obrigatórios</h1>
+  </fieldset>
+    </form>
+</div>    
+</div>
+
+
 </body>
 </html>
