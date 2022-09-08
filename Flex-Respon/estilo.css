@@ -1,15 +1,33 @@
 body{
-    background-color: purple;
+    background-color: rgb(255, 255, 255);
 }
 .container{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    background-color: aqua;
+    display: flex;
+    width: 100%;
+    height: auto;
+    /*Flexbox contents*/
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow:wrap;
 } 
 .box{
-    width: 200px;
-    height: 200px;
-    padding: 85px;
+    width: 20%;
+    height: 150px;
     background-color: red;
     margin: 20px;
+    box-sizing: border-box;
+} 
+
+@media all and (max-widht:1200px){
+    .box{
+        width: 40%;
+        background-color: black;
+    }
+}
+@media all and (max-widht:600px){
+    .box{
+        width: 90%;
+        background-color: blue;
+    }
 }
