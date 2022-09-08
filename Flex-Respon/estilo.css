@@ -7,13 +7,14 @@ body{
     width: 100%;
     height: auto;
     /*Flexbox contents*/
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    flex-flow:wrap;
+    flex-flow: wrap;
 } 
 .box{
     width: 20%;
-    height: 150px;
+    height: 100px;
     background-color: red;
     margin: 20px;
     box-sizing: border-box;
@@ -21,13 +22,13 @@ body{
 
 @media all and (max-widht:1200px){
     .box{
-        width: 40%;
+        width: 20%;
         background-color: black;
     }
 }
 @media all and (max-widht:600px){
     .box{
-        width: 90%;
+        width: 40%;
         background-color: blue;
     }
 }
