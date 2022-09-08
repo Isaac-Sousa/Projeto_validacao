@@ -52,26 +52,39 @@ legend{
     color:rgb(219, 15, 15);
 }
 h1 {
-    color: rgb(10, 65, 214);
+    color: rgb(102, 214, 10);
     font-size: 20px;
 }
+button{
+ color: red;
+ background-color: rgb(10, 53, 205);
+}
+
 #submit{
-    color:white;
+    display: inline-block;
+    color:rgb(251, 255, 252);
     background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
-    width: 45%;
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
     border: none;
-    padding: 15px;
-    font-size: 10px;
+    padding: 6px 15px;
+    font-size: 15px;
     border-spacing: 3px;
     cursor:pointer;
+    margin-right: 65px;
 }
 #delet{
-    color:white;
+    display: inline-block;
+    color:rgb(255, 255, 255);
     background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
-    width: 45%;
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
     border: none;
-    padding: 15px;
-    font-size: 10px;
+    padding: 6px 15px;
+    font-size: 15px;
     border-spacing: 3px;
     cursor: pointer;
+
 }
