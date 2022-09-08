@@ -4,6 +4,7 @@
 - Update não diferencia usuários existentes de não existentes;
 - Estilização da página de Login, falta alterações nos butões;
 - Praticas de reponsividades adicionadas "não finalizadas"
+- Modificação da extenção Do arquivo LOGIN, foi de ".PHP" para ".HTML"
 
 # Adicionados
  *Flex-Respon (Pasta)
