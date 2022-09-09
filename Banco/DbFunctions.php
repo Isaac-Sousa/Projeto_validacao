@@ -18,9 +18,10 @@ class DbFunctions
   /**
    * Inserir usuários
    */
+  /* diminuir o tamnaho da hash */
   public function inserirUsuario($nome, $email, $senha)
   {
-    $hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 10));
+    $hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 4));
     $duplicate = mysqli_query($this->conn, "SELECT * FROM user WHERE Nome_user = '$nome' OR Email_user = '$email'");
     if (mysqli_num_rows($duplicate) > 0) {
       echo "<script>alert('Usuário ou Email já cadastrado!')</script>";
