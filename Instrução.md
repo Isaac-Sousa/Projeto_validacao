@@ -5,6 +5,8 @@
 - Estilização da página de Login, falta alterações nos butões;
 - Praticas de reponsividades adicionadas "não finalizadas"
 - Modificação da extenção Do arquivo LOGIN, foi de ".PHP" para ".HTML"
+- Atualização da pagina de cadastro e mudança para .HTML
+- Hash muito longa, senha não entra no DB
 
 # Adicionados
  *Flex-Respon (Pasta)
