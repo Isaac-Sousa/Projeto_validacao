@@ -11,11 +11,19 @@
 <div>
   <a href="LOGIN.HTML" size="4" class="redirect"><label>Login</label>  
 </div>    
+
 <div>   
   <a href="CADASTRO.PHP" size="4" class="redirect"><label>Cadastrar</label></a>  
 </div>
+
+<br>
 <div>
   <a href="USERS.php" class="redirect"><label>Verificar usuários</label></a>
+</div>
+
+<br>
+<div>
+  <a href="flexbox.html" class="redirect"><label>Flex-Box</label></a>
 </div>
 </body>
 </html>
