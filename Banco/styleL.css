@@ -52,10 +52,10 @@ legend{
     color:rgb(219, 15, 15);
 }
 h1 {
-    color: rgb(102, 214, 10);
+    position: relative;
+    color: rgb(255, 255, 255);
     font-size: 20px;
 }
-
 .button{
     width: 20%;
     margin-left: 25%;
