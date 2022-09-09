@@ -52,31 +52,40 @@ legend{
     color:rgb(219, 15, 15);
 }
 h1 {
-    position: relative;
-    color: rgb(255, 255, 255);
+    color: rgb(102, 214, 10);
     font-size: 20px;
 }
-.button{
-    width: 20%;
-    margin-left: 25%;
-    border: 3px solid rgb(0, 57, 200);
-    border-radius: 20%;
-    background-color:rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(42, 15, 219);
-    font-size: 15px;
-    cursor:pointer;
-    float: left;
+button{
+ color: red;
+ background-color: rgb(10, 53, 205);
 }
-.button2{
-    margin-right: 25%;
-    border: 3px solid rgb(23, 11, 162);
-    border-radius: 20%;
-    background-color:rgb(227, 216, 216);
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(42, 15, 219);
+
+#submit{
+    display: inline-block;
+    color:rgb(251, 255, 252);
+    background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 15px;
     font-size: 15px;
+    border-spacing: 3px;
     cursor:pointer;
-    float: right;
+    margin-right: 65px;
+}
+#delet{
+    display: inline-block;
+    color:rgb(255, 255, 255);
+    background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 15px;
+    font-size: 15px;
+    border-spacing: 3px;
+    cursor: pointer;
 
 }
+
