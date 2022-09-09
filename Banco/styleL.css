@@ -10,7 +10,7 @@ body {
     transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
-    padding-bottom: 100px;
+    padding-bottom: 115px;
     border-radius: 15px;
     width: 20%;
     height: 25%;
@@ -55,7 +55,49 @@ h1 {
     position: relative;
     color: rgb(255, 255, 255);
     font-size: 20px;
+}  
+.btns{
+    display: flex;
 }
+button{
+       margin-top:30px ;
+       display: inline-block;
+       color:rgb(251, 255, 252);
+       background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
+       width: 40%;
+       height: 30px;
+       border-radius: 10px;
+       border: none;
+       padding: 6px 15px;
+       font-size: 15px;
+       border-spacing: 3px;
+       cursor:pointer;
+   }
+ .b1 {
+   margin-bottom: 10px;
+    float: left;
+   
+ }
+ .b2{
+    margin-left: 70px;
+    float:right
+ }
+   /*
+   .button2{
+       margin: 20%;
+       display: inline-block;
+       color:rgb(255, 255, 255);
+       background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
+       width: 40%;
+       height: 30px;
+       border-radius: 10px;
+       border: none;
+       padding: 6px 15px;
+       font-size: 15px;
+       border-spacing: 3px;
+       cursor: pointer;
+   }
+
 .button{
     width: 20%;
     margin-left: 25%;
@@ -78,5 +120,5 @@ h1 {
     font-size: 15px;
     cursor:pointer;
     float: right;
-
 }
+*/
