@@ -9,11 +9,11 @@
 </head>
 <body>
 <div>
-  <a href="LOGIN.PHP" size="4" class="redirect"><label>Login</label>  
+  <a href="LOGIN.HTML" size="4" class="redirect"><label>Login</label>
 </div>
 <br>
 <div>   
-  <a href="CADASTRO.PHP" size="4" class="redirect"><label>Cadastrar</label></a>  
+  <a href="CADASTRO.HTML" size="4" class="redirect"><label>Cadastrar</label></a>
 </div>
 
 <br>
