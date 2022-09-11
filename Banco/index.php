@@ -5,13 +5,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Azul ou Vermelha?</title>
+    <title>Redirecionamento</title>
 </head>
 <body>
 <div>
   <a href="LOGIN.PHP" size="4" class="redirect"><label>Login</label>  
 </div>
-
 <br>
 <div>   
   <a href="CADASTRO.PHP" size="4" class="redirect"><label>Cadastrar</label></a>  
