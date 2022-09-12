@@ -18,7 +18,7 @@ class DbFunctions
   /**
    * Inserir usuários
    */
-  /* diminuir o tamnaho da hash */
+  /* TODO - AUMENTAR A QUANTIDADE DE CARACTERES QUE O PHPMYADMIN VAI COMPORTAR PARA A SENHA */
   public function inserirUsuario($nome, $email, $senha)
   {
     $hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 4));
