@@ -1,12 +1,15 @@
-# Feedback de modificações do código da pasta(Banco) 
-- arquivo models e funções criadas, que quando chamadas não respondem;
-  - se retirar de dentro da estrutura da função e levar pro arquivo process funciona corretamente;
+# Feedback de modificações do código da pasta(Banco)
 - Update não diferencia usuários existentes de não existentes;
-- Estilização da página de Login, falta alterações nos butões;
 - Praticas de reponsividades adicionadas "não finalizadas"
-- Modificação da extenção Do arquivo LOGIN, foi de ".PHP" para ".HTML"
-- Atualização da pagina de cadastro e mudança para .HTML
-- Hash muito longa, senha não entra no DB
+- Toca de DB PHPmyadmin -> Postgres
+ - Afiliação do banco ao phpstorm
+ - Nome da tabela sofreu alteração user -> usuario
+
+
+# Resolvido
+- Quantidade de caracteres do banco aumentado para senha, 80
+- Botões de lolgin e cadastro resolvidos
+- models substituida por 'DbFunctions.php'
 
 # Adicionados
  *Flex-Respon (Pasta)
@@ -19,9 +22,9 @@
  -styleL.css
 # Erros encontrados
 ```bash
-- sintaxe, corrigidos;
-- require no lugar de include, corrigidos;
 - chamada de funções, necessita de verificação;
+- valores diferentes dos setados nos bancos;
+
 ```
 # Erros possíveis
 ```bash 

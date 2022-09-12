@@ -13,7 +13,7 @@
 </div>
 <br>
 <div>   
-  <a href="CADASTRO.HTML" size="4" class="redirect"><label>Cadastrar</label></a>
+  <a href="CADASTRO.php" size="4" class="redirect"><label>Cadastrar</label></a>
 </div>
 
 <br>
