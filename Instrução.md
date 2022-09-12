@@ -4,6 +4,7 @@
 - Toca de DB PHPmyadmin -> Postgres
  - Afiliação do banco ao phpstorm
  - Nome da tabela sofreu alteração user -> usuario
+- Modificações na conexão, para teste
 
 
 # Resolvido
@@ -12,14 +13,15 @@
 - models substituida por 'DbFunctions.php'
 
 # Adicionados
- *Flex-Respon (Pasta)
- -estilo.css (para pratica)
- -index.html (para pratica) 
+ * Flex-Respon (Pasta)
+ - estilo.css (para pratica)
+ - index.html (para pratica) 
 
  # Removidos
- -flex.css (para teste)
- -flexbox.html (para teste) 
- -styleL.css
+ - flex.css (para teste)
+ - flexbox.html (para teste) 
+ - styleL.css
+
 # Erros encontrados
 ```bash
 - chamada de funções, necessita de verificação;

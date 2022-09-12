@@ -21,11 +21,11 @@ class DbFunctions
   /* TODO - AUMENTAR A QUANTIDADE DE CARACTERES QUE O PHPMYADMIN VAI COMPORTAR PARA A SENHA */
   public function inserirUsuario($nome, $email, $hash)
   {
-    $duplicate= pg_query($this->conn,"SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'");
-    if (pg_num_rows($duplicate) > 0) {
+    $this->conn->query("SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'");
+    if (mysqli_num_rows($this->conn->query("SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'")) > 0) {
       echo "<script>alert('Usuário ou Email já cadastrado!')</script>";
     } else {
-      $this->conn->pg_query("INSERT INTO usuario (nome_user, email_user, senha_user) VALUES('$nome','$email','$hash')") or die (mysqli_error($this->conn));
+      $this->conn->query("INSERT INTO usuario (nome_user, email_user, senha_user) VALUES('$nome','$email','$hash')") or die (mysqli_error($this->conn));
       echo "<script>alert('User cadastrado!')</script>";
     }
   }
