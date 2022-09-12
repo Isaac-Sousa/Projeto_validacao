@@ -14,7 +14,7 @@ $conn = new mysqli('localhost','root','root','test_bd') or die (mysqli_error($co
 $nome = $_POST["f_nome"];
 $email = $_POST["f_email"];
 $senha = $_POST["f_senha"];  
-$results = mysqli_query($conn, "SELECT * FROM user"); 
+$results = mysqli_query($conn, "SELECT * FROM usuario");
 while ($row = mysqli_fetch_array($results)) {
 echo $row['ID_user']."-";
 echo $row['Nome_user']."<br>";
