@@ -24,7 +24,7 @@
 ```bash
 - chamada de funções, necessita de verificação;
 - valores diferentes dos setados nos bancos;
-
+- query não funcional em iserirusuarios;
 ```
 # Erros possíveis
 ```bash 
