@@ -24,7 +24,6 @@ class DbFunctions
   /**
    * Inserir usuários
    */
-  /* TODO - AUMENTAR A QUANTIDADE DE CARACTERES QUE O PHPMYADMIN VAI COMPORTAR PARA A SENHA */
   public function inserirUsuario($nome, $email, $hash)
   {
     $duplicate = pg_query($this->conn,"SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'");
@@ -41,10 +40,10 @@ class DbFunctions
    */
   public function deletarUsuario($nome, $email)
   {
-    $duplicate = mysqli_query($this->conn, "SELECT * FROM usuario WHERE Nome_user = '$nome' OR Email_user = '$email'");
-    if(mysqli_num_rows($duplicate)>=1){
+    $duplicate = pg_query($this->conn, "SELECT * FROM usuario WHERE Nome_user = '$nome' OR Email_user = '$email'");
+    if(pg_num_rows($duplicate)>=1){
       echo "<script>alert('Removendo o usuário)</script>";
-      $this->conn->query( "DELETE FROM usuario WHERE Nome_user = '$nome'") or die (mysqli_error($this->conn));
+      $delet = pg_query( "DELETE FROM usuario WHERE Nome_user = '$nome'") or die (pg_result_error($this->conn));
     }else{
       echo "<script>alert('Não foi possivél deletar ('/n') Usuário inexistente')</script>";
     }
