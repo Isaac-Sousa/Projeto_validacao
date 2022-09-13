@@ -17,12 +17,15 @@
 # Adicionados
  * Flex-Respon (Pasta)
  - estilo.css (para pratica)
- - index.html (para pratica) 
+ - index.html (para pratica)
+ - profile.php
 
  # Removidos
  - flex.css (para teste)
  - flexbox.html (para teste) 
  - styleL.css
+ - delet.php 
+ - models.php
 
 # Erros encontrados
 ```bash
