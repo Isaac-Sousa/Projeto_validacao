@@ -12,7 +12,13 @@ class DbFunctions
    */
   public function __construct()
   {
-    $this->conn = pg_pconnect("host=localhost port=5432 dbname=test_db user=postgres password=admin") or die("Banco indisponível");
+      $host = 'localhost';
+      $port = '5432';
+      $user = 'postgres';
+      $password = 'admin';
+      $dbname = 'test_db';
+      $C_String = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password}";
+     $this->conn = pg_connect($C_String) or die("Banco indisponível");
   }
 
   /**
@@ -21,11 +27,11 @@ class DbFunctions
   /* TODO - AUMENTAR A QUANTIDADE DE CARACTERES QUE O PHPMYADMIN VAI COMPORTAR PARA A SENHA */
   public function inserirUsuario($nome, $email, $hash)
   {
-    $this->conn->query("SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'");
-    if (mysqli_num_rows($this->conn->query("SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'")) > 0) {
+    $duplicate = pg_query($this->conn,"SELECT * FROM usuario WHERE nome_user = '$nome' OR email_user = '$email'");
+    if (pg_num_rows($duplicate) > 0) {
       echo "<script>alert('Usuário ou Email já cadastrado!')</script>";
     } else {
-      $this->conn->query("INSERT INTO usuario (nome_user, email_user, senha_user) VALUES('$nome','$email','$hash')") or die (mysqli_error($this->conn));
+      $insert = pg_query($this->conn,"INSERT INTO usuario (nome_user, email_user, senha_user) VALUES('$nome','$email','$hash')") or die (pg_result_error($this->conn));
       echo "<script>alert('User cadastrado!')</script>";
     }
   }

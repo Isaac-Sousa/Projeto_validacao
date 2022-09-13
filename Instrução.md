@@ -5,9 +5,11 @@
  - Afiliação do banco ao phpstorm
  - Nome da tabela sofreu alteração user -> usuario
 - Modificações na conexão, para teste
+- Atualizar as Function.
 
 
 # Resolvido
+- Conexão alterada em inserirusuario().
 - Quantidade de caracteres do banco aumentado para senha, 80
 - Botões de lolgin e cadastro resolvidos
 - models substituida por 'DbFunctions.php'
