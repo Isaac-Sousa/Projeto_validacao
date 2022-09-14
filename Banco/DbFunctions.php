@@ -68,6 +68,7 @@ class DbFunctions
      * 'Meio' feito
      */
     public function atualizarDadosUser(){
+        //necessita de teste
         $find = pg_query($this->conn, "SELECT * FROM usuario");
         $row = $find->fetch_array();
         $id = $row['ID_user'];

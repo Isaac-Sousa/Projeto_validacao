@@ -14,7 +14,7 @@ require_once 'DbFunctions.php';
  <div>
      <?php
      $dbFunctions = new DbFunctions();
-     $dbFunctions->selecionarTodosUsuario();
+     $dbFunctions->selecionarUsuario();
      <label>NOME: <?php echo $row[nome_user]; ?></label>
      <label>EMAIL: <?php echo $row[email_user]; ?></label>
      <label>SENHA: <?php echo $row[senha_user];?></label>
