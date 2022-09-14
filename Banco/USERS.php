@@ -16,10 +16,7 @@ $email = $_POST["f_email"];
 $senha = $_POST["f_senha"];  
 $results = mysqli_query($conn, "SELECT * FROM usuario");
 while ($row = mysqli_fetch_array($results)) {
-echo $row['ID_user']."-";
-echo $row['Nome_user']."<br>";
-echo $row['Email_user']."<br>";
-echo $row['Senha_user']."<br>";
+echo $row['ID_user']." ".$row['Nome_user']."\n".$row['Email_user']."<br>".$row['Senha_user']."<br>";
 echo "<br>";
 }
 ?>

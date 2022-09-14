@@ -14,10 +14,14 @@ require_once 'DbFunctions.php';
  <div>
      <?php
      $dbFunctions = new DbFunctions();
-     $dbFunctions->selecionarUsuario();
-     <label>NOME: <?php echo $row[nome_user]; ?></label>
-     <label>EMAIL: <?php echo $row[email_user]; ?></label>
-     <label>SENHA: <?php echo $row[senha_user];?></label>
+     //$dbFunctions->selecionarUsuario();
+     ?>
+     <label>NOME:</label>
+     <br>
+     <label>EMAIL:</label>
+     <br>
+     <label>SENHA:</label>
+     <br>
  </div>
 </body>
 </html>
