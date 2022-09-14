@@ -11,7 +11,9 @@ $nome = $_POST["f_nome"];
 $email = $_POST["f_email"];
 $senha = $_POST["f_senha"];
 $hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
-$dbFunctions->inserirUsuario($nome,$email,$hash);
+if(isset($_POST['SUB_register'])) {
+    $dbFunctions->inserirUsuario($nome, $email, $hash);
+} if(isset($_POST['SUB_login']))
 
 ?>
 </body>

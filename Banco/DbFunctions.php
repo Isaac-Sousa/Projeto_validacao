@@ -45,7 +45,7 @@ class DbFunctions
             echo "<script>alert('Removendo o usuário)</script>";
             $delet = pg_query("DELETE FROM usuario WHERE Nome_user = '$nome'") or die (pg_result_error($this->conn));
         } else {
-            echo "<script>alert('Não foi possivél deletar ('/n') Usuário inexistente')</script>";
+            echo '<script>alert("Não foi possivél deletar  \nUsuário inexistente")</script>';
         }
     }
 
@@ -65,10 +65,18 @@ class DbFunctions
     }
     /**
      * Atualizar dados do usuário
-     *
+     * 'Meio' feito
      */
     public function atualizarDadosUser(){
-    //atualiza ai
+        $find = pg_query($this->conn, "SELECT * FROM usuario");
+        $row = $find->fetch_array();
+        $id = $row['ID_user'];
+        $nome = $_POST["f_nome"];
+        $email = $_POST["f_email"];
+        $senha = $_POST["f_senha"];
+        $UP = pg_query($this->conn,"UPDATE user SET nome_user ='$nome', email_user ='$email', senha_user ='$senha' WHERE ID_user='$id'");
+        echo "<script>alert('Usuário atualizado!')</script>";
+
     }
 
 
