@@ -80,21 +80,25 @@ class DbFunctions
 
     }
 
-    public function validSenha()
-    {
-        $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nomE' AND email_user='$emaiL'");
+    public function validSenha($nome,$email,$senha,$hash){
+        $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
         while ($row = pg_fetch_array($results)) {
-        echo $row['Senha_user'] . "<br>";
-        if (password_verify($senhA, $row['Senha_user'])) {
-            echo "deu certo";
-            //echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
-        } else {
-            echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';
-        }
+            $row['senha_user'];
 
- }}
-    public function selecionarUsuario()
-    {
+            if ($row['senha_user'] = $hash) {
+
+                if (password_verify($senha,$hash)) {
+                    echo "deu certo";
+                    //echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
+                }//if interno
+            }//if externo
+            else {
+                echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';
+            }
+        }
+    }
+
+    public function selecionarUsuario(){
         $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
         while ($row = pg_fetch_array($results)) {
             echo $row['nome_user'] . "<br>";

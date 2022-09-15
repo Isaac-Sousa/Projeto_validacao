@@ -14,18 +14,19 @@ require_once 'DbFunctions.php';
 
 $dbFunctions = new DbFunctions();
 
-$nomE="Isaac Sousa";
-$emaiL="sousa@gmail.com";
-$senhA ="sousa21";
-
-$dbFunctions->validSenha($nomE, $emaiL, $senhA);
-
-
-
+$nome="Isaac Sousa";
+$email="sousa@gmail.com";
+$senha ="sousa21";
+$hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
+$dbFunctions->validSenha($nome,$email,$senha,$hash);
 
 /*$senha2 ='num é pussivel';
-$hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));*/
-/*if (password_verify($senha,$hash)){
+
+if (password_verify($senha,$hash)){
+    echo $senha;
+    echo "<br>";
+    echo $hash;
+    echo "<br>";
     echo "Parece que está certa!";
 }else{
     echo "Mentira que funcionou KKKKKKKK";
