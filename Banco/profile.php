@@ -12,15 +12,24 @@ echo "<script>window.alert('Bem vindo a pagina de perfil')</script>"
 </head>
 <body>
 <?php
+require_once 'DbFunctions.php';
 
-?>
- <div>
-     <label>NOME:</label>
-     <br>
-     <label>EMAIL:</label>
-     <br>
-     <label>SENHA:</label>
-     <br>
+$dbFunctions = new DbFunctions();
+$nome = $_POST["f_nome"];
+$email = $_POST["f_email"];
+
+$dbFunctions->$this->conn;
+$results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
+while ($row = pg_fetch_array($dbFunctions->results)) {
+ ?>
+<label>Nome:<?php echo $row['nome_user'];?></label>
+<br>
+<label>Nome:<?php echo $row['email_user'];?></label>
+<br>
+<label>Nome:<?php echo $row['senha_user'];?></label>
+<br>
+<?php  } ?>
+
  </div>
 </body>
 </html>

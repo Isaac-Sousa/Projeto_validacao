@@ -83,28 +83,28 @@ class DbFunctions
 
     public function validSenha($nome,$email,$senha,$hash){
         $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
-        while ($row = pg_fetch_array($results)) {
+        if($row = pg_fetch_array($results)){
             $row['senha_user'];
 
-            if ($row['senha_user'] = $hash) {
-
-             if (password_verify($senha,$hash)) {
+             if (password_verify($senha,$row['senha_user'])) {
                 echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
-
+                $_POST['f_name']=$nome;
+                $_POST['f_email']=$email;
+                $_POST['f_senha']=$senha;
                 }//if interno
-            }//if externo
             else {
                 echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';
             }
         }
-    }
+        }
 
-    public function selecionarUsuario(){
+
+    public function selecionarUsuario($nome,$email){
         $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
         while ($row = pg_fetch_array($results)) {
-            echo $row['nome_user'] . "<br>";
-            echo $row['email_user'] . "<br>";
-            echo $row['senha_user'] . "<br>";
+             $row['nome_user'];
+             $row['email_user'];
+             $row['senha_user'];
         }
 
     }
