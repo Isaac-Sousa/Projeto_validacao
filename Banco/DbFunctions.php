@@ -32,6 +32,7 @@ class DbFunctions
         } else {
             $insert = pg_query($this->conn, "INSERT INTO usuario (nome_user, email_user, senha_user) VALUES('$nome','$email','$hash')") or die (pg_result_error($this->conn));
             echo "<script>alert('User cadastrado!')</script>";
+            echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/CADASTRO.php"</script>';
         }
     }
 
@@ -87,9 +88,9 @@ class DbFunctions
 
             if ($row['senha_user'] = $hash) {
 
-                if (password_verify($senha,$hash)) {
-                    echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
-                    //echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
+             if (password_verify($senha,$hash)) {
+                echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
+
                 }//if interno
             }//if externo
             else {
