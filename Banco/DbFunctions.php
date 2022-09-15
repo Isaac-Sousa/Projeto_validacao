@@ -88,7 +88,7 @@ class DbFunctions
             if ($row['senha_user'] = $hash) {
 
                 if (password_verify($senha,$hash)) {
-                    echo "deu certo";
+                    echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
                     //echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
                 }//if interno
             }//if externo
