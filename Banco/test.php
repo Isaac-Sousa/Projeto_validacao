@@ -12,14 +12,15 @@
 <?php
 $nome="deletar";
 $email="deletar@gmail.com";
-    require_once 'DbFunctions.php';
-$dbFunctions = new DbFunctions();
-$dbFunctions->deletarUsuario($nome,$email);
-if( $dbFunctions = true ){
-    echo "Apagei o troxa";
+$senha = 'Sousa';
+$senha2 ='num é pussivel';
+$hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
+if (password_verify($senha2,$hash)){
+    echo "Parece que está certa!";
 }else{
-    echo "O trouxa é outro, você errou!";
+    echo "Mentira que funcionou KKKKKKKK";
 }
+
 
 ?>
 
