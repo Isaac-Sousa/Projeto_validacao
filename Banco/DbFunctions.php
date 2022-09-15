@@ -74,11 +74,38 @@ class DbFunctions
         $id = $row['ID_user'];
         $nome = $_POST["f_nome"];
         $email = $_POST["f_email"];
-        $senha = $_POST["f_senha"];
-        $UP = pg_query($this->conn,"UPDATE user SET nome_user ='$nome', email_user ='$email', senha_user ='$senha' WHERE ID_user='$id'");
+        $senhaUP = $_POST["f_senha"];
+        $UP = pg_query($this->conn,"UPDATE user SET nome_user ='$nome', email_user ='$email', senha_user ='$senhaUP' WHERE ID_user='$id'");
         echo "<script>alert('Usuário atualizado!')</script>";
 
     }
+
+    public function validSenha()
+    {
+        $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nomE' AND email_user='$emaiL'");
+        while ($row = pg_fetch_array($results)) {
+        echo $row['Senha_user'] . "<br>";
+        if (password_verify($senhA, $row['Senha_user'])) {
+            echo "deu certo";
+            //echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
+        } else {
+            echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';
+        }
+
+ }}
+    public function selecionarUsuario()
+    {
+        $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
+        while ($row = pg_fetch_array($results)) {
+            echo $row['nome_user'] . "<br>";
+            echo $row['email_user'] . "<br>";
+            echo $row['senha_user'] . "<br>";
+        }
+
+    }
+
+
+
 
 
 }

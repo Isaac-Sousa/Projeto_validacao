@@ -10,16 +10,26 @@
 
 
 <?php
-$nome="deletar";
-$email="deletar@gmail.com";
-$senha = 'Sousa';
-$senha2 ='num é pussivel';
-$hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
-if (password_verify($senha2,$hash)){
+require_once 'DbFunctions.php';
+
+$dbFunctions = new DbFunctions();
+
+$nomE="Isaac Sousa";
+$emaiL="sousa@gmail.com";
+$senhA ="sousa21";
+
+$dbFunctions->validSenha($nomE, $emaiL, $senhA);
+
+
+
+
+/*$senha2 ='num é pussivel';
+$hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));*/
+/*if (password_verify($senha,$hash)){
     echo "Parece que está certa!";
 }else{
     echo "Mentira que funcionou KKKKKKKK";
-}
+}*/
 
 
 ?>

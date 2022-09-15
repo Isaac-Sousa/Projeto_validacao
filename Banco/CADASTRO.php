@@ -32,8 +32,8 @@
     <label class="Luser">Senha:</label>
   </div>
   <div class="btns">
-    <button class="b1" type="submit" id="SUB_register" name="SUB_login">Enviar</button>
-    <button class="b2" type="reset" id="delet" name="DEL_login">Limpar</button>
+    <button class="b1" type="submit" id="register" name="SUB_register">Enviar</button>
+    <button class="b2" type="reset" id="delet" name="DEL_register">Limpar</button>
    </div>
 <h1>Todos os campos são obrigatórios</h1>
   </fieldset>

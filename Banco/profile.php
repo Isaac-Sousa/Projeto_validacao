@@ -1,3 +1,6 @@
+<?php
+echo "<script>window.alert('Bem vindo a pagina de perfil')</script>"
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +12,9 @@
 </head>
 <body>
 <?php
-require_once 'DbFunctions.php';
+
 ?>
  <div>
-     <?php
-     $dbFunctions = new DbFunctions();
-     //$dbFunctions->selecionarUsuario();
-     ?>
      <label>NOME:</label>
      <br>
      <label>EMAIL:</label>
