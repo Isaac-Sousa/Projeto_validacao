@@ -16,13 +16,13 @@ body {
     height: 25%;
 }
 fieldset{
-    border: 3px solid rgb(219, 15, 15);
+    border: 3px solid rgb(15, 80, 219);
 }
 legend{
-    border:1px solid rgb(219, 15, 15);
+    border:1px solid rgb(58, 121, 213);
     padding: 10px;
     text-align: center;
-    background-color: rgb(219, 15, 15);
+    background-color: rgb(15, 165, 219);
     color: white;
     border-radius: 8px;
     
@@ -49,7 +49,7 @@ legend{
 .inputuser:focus ~ .Luser, .inputuser:valid ~ .Luser{
     top: -20px;
     font-size: 12px;
-    color:rgb(219, 15, 15);
+    color: rgb(19, 5, 154);
 }
 h1 {
     position: relative;
@@ -84,13 +84,13 @@ button{
  }
 a {
     position: absolute;
-    top:70%;
+    top:73%;
     left:50%;
-    transform: translate(-70%,-70%);
+    transform: translate(-50%,-75%);
     outline: none;
 }
 a:link{
-    color: black;
+    color: darkred;
     text-decoration: none;
 }
 a:visited{

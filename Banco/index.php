@@ -22,7 +22,8 @@
 </div>   <!-- Container -->
 <p>Basta selecionar a operação que quer.<br>
 Login: se tiver um usuário já alocado dentro do banco você irá para o seu perfil;<br>
-Cadastro: crie seu usuário para poder acessar seu perfil.
+Cadastro: crie seu usuário para poder acessar seu perfil.<br>
+PEGA MAMP 'carinha de raiva'
 </p>
 
 </body>

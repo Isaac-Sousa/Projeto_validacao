@@ -82,3 +82,26 @@ button{
     margin-left: 70px;
     float:right
  }
+a {
+    position: absolute;
+    top:73%;
+    left:50%;
+    transform: translate(-50%,-75%);
+    outline: none;
+}
+a:link{
+    color: black;
+    text-decoration: none;
+}
+a:visited{
+    color: #40c5f6;
+    text-decoration: none;
+}
+a:hover{
+    color: #4d42f6;
+    text-decoration: none;
+}
+a:active{
+    color: #81f65b;
+    text-decoration: none;
+}
