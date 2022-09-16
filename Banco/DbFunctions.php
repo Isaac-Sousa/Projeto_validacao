@@ -88,9 +88,9 @@ class DbFunctions
 
              if (password_verify($senha,$row['senha_user'])) {
                 echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
-                $_POST['f_name']=$nome;
-                $_POST['f_email']=$email;
-                $_POST['f_senha']=$senha;
+                $_POST['f_name'];
+                $_POST['f_email'];
+                $_POST['f_senha'];
                 }//if interno
             else {
                 echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';

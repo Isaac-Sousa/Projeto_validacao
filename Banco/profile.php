@@ -17,10 +17,10 @@ require_once 'DbFunctions.php';
 $dbFunctions = new DbFunctions();
 $nome = $_POST["f_nome"];
 $email = $_POST["f_email"];
+echo "Seu Perfil é aqui";
 
-$dbFunctions->$this->conn;
-$results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
-while ($row = pg_fetch_array($dbFunctions->results)) {
+$userInfos = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
+while ($row = pg_fetch_array($userInfos)) {
  ?>
 <label>Nome:<?php echo $row['nome_user'];?></label>
 <br>
