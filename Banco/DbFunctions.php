@@ -58,10 +58,10 @@ class DbFunctions
     {
         $results = pg_query($this->conn, "SELECT * FROM usuario");
         while ($row = pg_fetch_array($results)) {
-            echo $row['ID_user']."-";
-            echo $row['Nome_user'] . "<br>";
-            echo $row['Email_user'] . "<br>";
-            echo $row['Senha_user'] . "<br>";
+            echo $row['id_user']."-";
+            echo $row['nome_user'] . "<br>";
+            echo $row['email_user'] . "<br>";
+            echo $row['senha_user'] . "<br>";
         }
     }
     /**
@@ -87,10 +87,9 @@ class DbFunctions
             $row['senha_user'];
 
              if (password_verify($senha,$row['senha_user'])) {
-                echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
-                $_POST['f_name'];
-                $_POST['f_email'];
-                $_POST['f_senha'];
+              $_POST=$nome;
+              $_POST=$email;
+              echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
                 }//if interno
             else {
                 echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';
@@ -98,13 +97,19 @@ class DbFunctions
         }
         }
 
-
+   //temporariamente deixado de lado
     public function selecionarUsuario($nome,$email){
         $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
         while ($row = pg_fetch_array($results)) {
-             $row['nome_user'];
-             $row['email_user'];
-             $row['senha_user'];
+                echo $row['nome_user'];
+                echo $row['email_user'];
+                echo $row['senha_user'];
+
+
+
+
+
+
         }
 
     }

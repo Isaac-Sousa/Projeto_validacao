@@ -13,19 +13,11 @@
 <div>
   <a href="LOGIN.HTML" size="4" class="redirect"><label>Login</label>
 </div>
-<br>
 <div>   
   <a href="CADASTRO.php" size="4" class="redirect"><label>Cadastrar</label></a>
 </div>
-
-<br>
 <div>
   <a href="USERS.php" class="redirect"><label>Verificar usuários</label></a>
-</div>
-
-<br>
-<div>
-  <a href="flexbox.html" class="redirect"><label>Flex-Box</label></a>
 </div>
 </div>   <!-- Container -->
 <p>Basta selecionar a operação que quer.<br>
