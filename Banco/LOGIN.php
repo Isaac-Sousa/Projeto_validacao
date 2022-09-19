@@ -39,5 +39,13 @@
     </form>
 </div>
 <a href="CADASTRO.php">Não tem uma conta ainda?</a>
+
+<?php
+session_start();
+$_SESSION['nome']=$_POST['f_nome'];
+$_SESSION['email']=$_POST['f_email'];
+exit;
+?>
+
 </body>
 </html>

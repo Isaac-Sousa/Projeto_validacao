@@ -1,8 +1,6 @@
 <?php
+echo "<script>window.alert('Bem vindo a pagina de perfil')</script>";
 session_start();
-$nome=$_SESSION['nome_p'];
-$email=$_SESSION['email_p'];
-echo "<script>window.alert('Bem vindo a pagina de perfil')</script>"
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,26 +13,42 @@ echo "<script>window.alert('Bem vindo a pagina de perfil')</script>"
 </head>
 <body>
 <?php
-require_once 'process.php';
-if(isset($_SESSION['nome_p'])&&isset($_SESSION['email_p'])) {
-    $host = 'localhost';
-    $port = '5432';
-    $user = 'postgres';
-    $password = 'admin';
-    $dbname = 'test_db';
-    $C_String = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password}";
-    $this->cone = pg_connect($C_String) or die("Banco indisponível");
+$host = 'localhost';
+$port = '5432';
+$user = 'postgres';
+$password = 'admin';
+$dbname = 'test_db';
+$C_String = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password}";
+$perfil = pg_connect($C_String) or die("Banco indisponível");
+$user = $_SESSION['nome'];
+$userEM = $_SESSION['email'];
+$results = pg_query($perfil, "SELECT * FROM usuario WHERE nome_user='$user' AND email_user='$userEM'");
+while ($row = pg_fetch_array($results)>0) {
+?>
 
-    $results = pg_query($this->cone, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
-    while ($row = pg_fetch_array($results)) {
-        echo $row['nome_user'] . "<br>";
-        echo $row['email_user'] . "<br>";
-        echo $row['senha_user'] . "<br>";
-    }
-}else{
-    echo "<script>window.alert('Não Funcionou')</script>";
+<table>
+ <tr>
+  <td>
+   <b>Nome: </b>
+  </td>
+  <td>
+   <?php echo "<b>".$row['nome_user']; ?>
+  </td>
+ <tr>
+
+ <tr>
+  <td>
+   <b>Email: </b>
+  </td>
+  <td>
+   <?php echo $row['email_user']."</b>"; ?>
+  </td>
+ </tr>
+</table>
+<?php
 }
-session_destroy();
+echo "<script>window.alert('O código chegou até aqui')</script>";
+
     ?>
  </div>
 </body>

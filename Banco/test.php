@@ -10,27 +10,23 @@
 
 
 <?php
-require_once 'DbFunctions.php';
 
-$dbFunctions = new DbFunctions();
+    $host = 'localhost';
+    $port = '5432';
+    $user = 'postgres';
+    $password = 'admin';
+    $dbname = 'test_db';
+    $C_String = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password}";
+    $conn = pg_connect($C_String) or die("Banco indisponível");
 
-$nome="Isaac Sousa";
-$email="sousa@gmail.com";
-$senha ="sousa21";
-$hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
-$dbFunctions->validSenha($nome,$email,$senha,$hash);
+$results = pg_query($conn, "SELECT * FROM usuario WHERE nome_user='Isaac Sousa' AND email_user='sousa@gmail.com'");
+while ($row = pg_fetch_array($results)) {
+    echo $row['nome_user'];
+    echo $row['email_user'];
+    echo $row['senha_user'];
 
-/*$senha2 ='num é pussivel';
+}
 
-if (password_verify($senha,$hash)){
-    echo $senha;
-    echo "<br>";
-    echo $hash;
-    echo "<br>";
-    echo "Parece que está certa!";
-}else{
-    echo "Mentira que funcionou KKKKKKKK";
-}*/
 
 
 ?>

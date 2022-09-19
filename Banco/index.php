@@ -11,7 +11,7 @@
 <h1>HomePage</h1>
 <div class="menu">
 <div>
-  <a href="LOGIN.HTML" size="4" class="redirect"><label>Login</label>
+  <a href="LOGIN.php" size="4" class="redirect"><label>Login</label>
 </div>
 <div>   
   <a href="CADASTRO.php" size="4" class="redirect"><label>Cadastrar</label></a>

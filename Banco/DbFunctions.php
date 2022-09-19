@@ -87,30 +87,25 @@ class DbFunctions
             $row['senha_user'];
 
              if (password_verify($senha,$row['senha_user'])) {
-                 $_COOKIE[$row['id_user']];
               echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/profile.php"</script>';
 
                 }//if interno
             else {
-                echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.HTML"</script>';
+                echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.php"</script>';
             }
         }
         }
 
-   //temporariamente deixado de lado
+   // não funcional
     public function selecionarUsuario($nome,$email){
+
         $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
-        while ($row = pg_fetch_array($results)) {
-                echo $row['nome_user'];
-                echo $row['email_user'];
-                echo $row['senha_user'];
+       $row = $results->fetch_array();
+              $_SESSION['id']=$row['id_user'];
+              headers('location:profile.php');
+              exit;
 
 
-
-
-
-
-        }
 
     }
 
