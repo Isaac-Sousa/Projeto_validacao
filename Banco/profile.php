@@ -23,7 +23,9 @@ $perfil = pg_connect($C_String) or die("Banco indisponível");
 $user = $_SESSION['nome'];
 $userEM = $_SESSION['email'];
 $results = pg_query($perfil, "SELECT * FROM usuario WHERE nome_user='$user' AND email_user='$userEM'");
-while ($row = pg_fetch_array($results)>0) {
+if ($row = pg_fetch_array($results)>0) {
+    //TODO - Tabela não aparece; Resultados não são postos a amostra; Session vindo nulo
+
 ?>
 
 <table>
@@ -46,9 +48,9 @@ while ($row = pg_fetch_array($results)>0) {
  </tr>
 </table>
 <?php
-}
+}else{
 echo "<script>window.alert('O código chegou até aqui')</script>";
-
+}
     ?>
  </div>
 </body>
