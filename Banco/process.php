@@ -31,7 +31,7 @@ if(isset($_POST['Exit'])){
     echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/logout.php"</script>';
 }
 if(isset($_POST['Change'])){
-    //inexistente
+    //funcional
     echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/update.php"</script>';
 }
 
