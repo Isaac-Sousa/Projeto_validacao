@@ -8,7 +8,7 @@ session_start();
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge' charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" href="???">
+    <link rel="stylesheet" type="text/css" href="styleUser.css">
     <title>Perfil</title>
 </head>
 <body>
@@ -23,7 +23,7 @@ $perfil = pg_connect($C_String) or die("Banco indisponível");
 $user = $_SESSION['nome'];
 $userEM = $_SESSION['email'];
 $results = pg_query($perfil, "SELECT * FROM usuario WHERE nome_user='$user' AND email_user='$userEM'");
-if ($row = pg_fetch_array($results)>0) {
+if ($row = pg_fetch_array($results)) {
     //TODO - Tabela não aparece; Resultados não são postos a amostra; Session vindo nulo
 
 ?>
@@ -34,7 +34,7 @@ if ($row = pg_fetch_array($results)>0) {
    <b>Nome: </b>
   </td>
   <td>
-   <?php echo "<b>".$row['nome_user']; ?>
+   <?php echo $row['nome_user']; ?>
   </td>
  <tr>
 

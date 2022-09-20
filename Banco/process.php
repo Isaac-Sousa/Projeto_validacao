@@ -10,6 +10,8 @@ $dbFunctions = new DbFunctions();
 $nome = $_POST["f_nome"];
 $email = $_POST["f_email"];
 $senha = $_POST["f_senha"];
+$_SESSION['nome']=$_POST['f_nome'];
+$_SESSION['email']=$_POST['f_email'];
 $hash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
 if(isset($_POST['SUB_register'])) {
     $dbFunctions->inserirUsuario($nome, $email, $hash);
