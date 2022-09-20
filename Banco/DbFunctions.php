@@ -68,17 +68,14 @@ class DbFunctions
      * Atualizar dados do usuário
      * 'Meio' feito
      */
-    public function atualizarDadosUser(){
+    public function atualizarDadosUser($nome,$email,$nome2,$email2,$newhash){
         //necessita de teste
-        $find = pg_query($this->conn, "SELECT * FROM usuario");
-        $row = $find->fetch_array();
-        $id = $row['ID_user'];
-        $nome = $_POST["f_nome"];
-        $email = $_POST["f_email"];
-        $senhaUP = $_POST["f_senha"];
-        $UP = pg_query($this->conn,"UPDATE user SET nome_user ='$nome', email_user ='$email', senha_user ='$senhaUP' WHERE ID_user='$id'");
+        $find = pg_query($this->conn, "SELECT * FROM usuario where nome_user='$nome' AND email_user='$email'");
+        if($row=pg_fetch_array($find)){
+        $id = $row['id_user'];
+        $UP = pg_query($this->conn,"UPDATE user SET nome_user ='$nome2', email_user ='$email2', senha_user ='$newhash' WHERE ID_user='$id'");
         echo "<script>alert('Usuário atualizado!')</script>";
-
+        }
     }
 
     public function validSenha($nome,$email,$senha,$hash){
@@ -96,7 +93,7 @@ class DbFunctions
         }
         }
 
-   // não funcional
+   // não funcional - excluir depois
     public function selecionarUsuario($nome,$email){
 
         $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");

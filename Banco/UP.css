@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:linear-gradient(to right, rgb(110, 54, 182), rgb(41, 4, 152));
+}
+.caixa{
+    color:white;
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-1%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    padding-top: 40px;
+    padding-bottom: 320px;
+    border-radius: 15px;
+    width: 20%;
+    height: 25%;
+}
+fieldset{
+    border: 3px solid rgb(15, 80, 219);
+}
+legend{
+    border:1px solid rgb(58, 121, 213);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(15, 165, 219);
+    color: white;
+    border-radius: 8px;
+
+}
+.inputBox{
+    position: relative;
+}
+.inputuser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color:white;
+    font-size: 15px;
+    width: 100%;
+}
+.UPuser1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.UPuser2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputuser:focus ~ .UPuser1, .inputuser:valid ~ .UPuser1{
+    top: -20px;
+    font-size: 12px;
+    color: rgb(19, 5, 154);
+}
+.inputuser:focus ~ .UPuser2, .inputuser:valid ~ .UPuser2{
+    top: -20px;
+    font-size: 12px;
+    color: rgb(19, 5, 154);
+}
+h1 {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.btns{
+    display: flex;
+}
+button{
+    margin-top:30px ;
+    display: inline-block;
+    color:rgb(251, 255, 252);
+    background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 15px;
+    font-size: 15px;
+    border-spacing: 3px;
+    cursor:pointer;
+}
+.b1 {
+    margin-bottom: 10px;
+    float: left;
+
+}
+.b2{
+    margin-left: 70px;
+    float:right
+}

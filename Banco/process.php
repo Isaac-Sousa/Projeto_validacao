@@ -19,7 +19,13 @@ if(isset($_POST['SUB_register'])) {
     $dbFunctions->validSenha($nome,$email,$senha,$hash);
 
 }
-
+if(isset($_POST['SUB_UP'])) {
+    $nome2 = $_POST["f_nomeUP"];
+    $email2 = $_POST["f_emailUP"];
+    $senha = $_POST["f_senhaUP"];
+    $newhash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
+    $dbFunctions->atualizarDadosUser($nome,$email,$nome2,$email2,$newhash);
+}
 
 ?>
 </body>

@@ -5,29 +5,48 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Atualize</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="UP.css"   >
 </head>
 <body>
 <div class="caixa">
 
     <form method="POST" action="process.php">
         <fieldset>
-            <legend><b>Formulário de Cadastro</b></legend>
+            <legend><b>Informações antigas</b></legend>
             <br>
-
 
             <div class="inputBox">
                 <input type="text" name="f_nome" required class="inputuser">
-                <label class="Luser">Nome: </label>
+                <label class="UPuser1">Nome: </label>
             </div>
             <br><br>
             <div class="inputBox">
                 <input type="text" name="f_email" required class="inputuser">
-                <label class="Luser">Email: </label>
+                <label class="UPuser1">Email: </label>
             </div>
             <br><br>
             <div class="inputBox">
                 <input type="password" name="f_senha" required class="inputuser">
-                <label class="Luser">Senha:</label>
+                <label class="UPuser1">Senha:</label>
+            </div>
+            <br><br>
+            <legend><b>Informações Atuais</b></legend>
+            <br><br>
+
+              <!-- Update form -->
+            <div class="inputBox">
+                <input type="text" name="f_nomeUP" required class="inputuser">
+                <label class="UPuser2">Nome: </label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="f_emailUP" required class="inputuser">
+                <label class="UPuser2">Email: </label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="password" name="f_senhaUP" required class="inputuser">
+                <label class="UPuser2">Senha:</label>
             </div>
             <div class="btns">
                 <button class="b1" type="submit" id="register" name="SUB_UP">Enviar</button>
@@ -38,13 +57,6 @@
 </div>
 
 
-
-
-
-
-<?php
-//teste de update para form de update
-?>   
 
 </body>
 </html>

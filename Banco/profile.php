@@ -12,8 +12,6 @@ session_start();
     <title>Perfil</title>
 </head>
 <body>
-
-
 <?php
 $host = 'localhost';
 $port = '5432';
@@ -28,18 +26,17 @@ $results = pg_query($perfil, "SELECT * FROM usuario WHERE nome_user='$user' AND 
 if ($row = pg_fetch_array($results)) {
     //TODO - Tabela não aparece; Resultados não são postos a amostra; Session vindo nulo
 
-?>
+?><div>
+<dic class="retangulo"></dic>
+<div class="circulo"></div>
+<h1>   <?php echo $row['nome_user']; ?> </h1>
+  </div>
 
-<table>
- <tr class="TLs">
-  <td>
-   <b>Nome: </b>
-  </td>
-  <td>
-   <?php echo $row['nome_user']; ?>
-  </td>
- <tr>
 <br>
+<br>
+
+<div>
+<table>
  <tr class="TLs">
   <td>
    <b>Email: </b>
@@ -49,11 +46,18 @@ if ($row = pg_fetch_array($results)) {
   </td>
  </tr>
 </table>
+</div>
 <?php
 }else{
 echo "<script>window.alert('O código chegou até aqui')</script>";
 }
     ?>
- </div>
+<form method="" action="styleL.css">
+<div class="btns">
+    <button class="b1" type="submit" id="register" name="Send">Enviar</button>
+    <button class="b2" type="reset" id="delet" name="erase">Limpar</button>
+</div>
+</form>
+
 </body>
 </html>

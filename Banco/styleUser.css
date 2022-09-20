@@ -1,13 +1,41 @@
+body{
+
+}
 table,th,td{
-    color: whitesmoke;
-    margin-left: 42%;
+    color: black;
+    margin-left: 40%;
     margin-top: 20%;
     padding: 20px;
     justify-content: center;
-    background: gray;
     border-radius: 10px ;
     border: 1px solid ghostwhite;
 }
 td{
     border: none;
+}
+.circulo{
+    position: absolute;
+    background-color: darkblue;
+    height: 100px;
+    width: 100px;
+    left: 45%;
+    top: 25px;
+    border-radius: 50%;
+    bottom: 0px;
+
+}
+h1{
+    position: absolute;
+    font-size:25px;
+    left: 857px;
+    margin-top: 120px;
+}
+.retangulo{
+    position: absolute;
+    background-color: #11d5b7;
+    height: 150px;
+    width: 98%;
+    margin-bottom: 98%;
+    border-radius: 20px;
+
 }
