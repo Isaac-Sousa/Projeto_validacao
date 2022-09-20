@@ -1,9 +1,13 @@
-table{
+table,th,td{
     color: whitesmoke;
-    margin-left: 45%;
+    margin-left: 42%;
     margin-top: 20%;
     padding: 20px;
     justify-content: center;
     background: gray;
     border-radius: 10px ;
+    border: 1px solid ghostwhite;
+}
+td{
+    border: none;
 }

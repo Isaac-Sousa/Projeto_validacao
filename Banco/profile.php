@@ -12,6 +12,8 @@ session_start();
     <title>Perfil</title>
 </head>
 <body>
+
+
 <?php
 $host = 'localhost';
 $port = '5432';
@@ -29,7 +31,7 @@ if ($row = pg_fetch_array($results)) {
 ?>
 
 <table>
- <tr>
+ <tr class="TLs">
   <td>
    <b>Nome: </b>
   </td>
@@ -37,8 +39,8 @@ if ($row = pg_fetch_array($results)) {
    <?php echo $row['nome_user']; ?>
   </td>
  <tr>
-
- <tr>
+<br>
+ <tr class="TLs">
   <td>
    <b>Email: </b>
   </td>
