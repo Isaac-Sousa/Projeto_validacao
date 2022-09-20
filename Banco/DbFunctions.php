@@ -73,7 +73,7 @@ class DbFunctions
         $find = pg_query($this->conn, "SELECT * FROM usuario where nome_user='$nome' AND email_user='$email'");
         if($row=pg_fetch_array($find)){
         $id = $row['id_user'];
-        $UP = pg_query($this->conn,"UPDATE user SET nome_user ='$nome2', email_user ='$email2', senha_user ='$newhash' WHERE ID_user='$id'");
+        $UP = pg_query($this->conn,"UPDATE usuario SET nome_user ='$nome2', email_user ='$email2', senha_user ='$newhash' WHERE ID_user='$id'");
         echo "<script>alert('Usuário atualizado!')</script>";
         }
     }
