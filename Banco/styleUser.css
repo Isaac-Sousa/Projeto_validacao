@@ -30,6 +30,13 @@ h1{
     left: 857px;
     margin-top: 120px;
 }
+h{
+    position: absolute;
+    font-size:20px;
+    left: 857px;
+    margin-top: 360px;
+    font-style: italic;
+}
 .retangulo{
     position: absolute;
     background-color: #11d5b7;
@@ -38,4 +45,31 @@ h1{
     margin-bottom: 98%;
     border-radius: 20px;
 
+}
+.flexo{
+    display: flex;
+
+}button {
+     margin-top: 100px;
+     display: inline-block;
+     color: rgb(251, 255, 252);
+     background-image: linear-gradient(to right, rgb(49, 231, 167), rgb(8, 206, 129));
+     width: 90px;
+     height: 30px;
+     border-radius: 10px;
+     border: none;
+     padding: 6px 8px;
+     font-size: 15px;
+     border-spacing: 3px;
+     cursor: pointer;
+ } .b1 {
+      margin-top: 410%;
+       margin-left: 60%;
+       float: right;
+
+   }
+.b2{
+    margin-top: 230%;
+    margin-left: 70px;
+    float: right;
 }

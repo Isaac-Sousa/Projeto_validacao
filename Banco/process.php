@@ -26,6 +26,14 @@ if(isset($_POST['SUB_UP'])) {
     $newhash = password_hash($senha, PASSWORD_BCRYPT, array('cost' => 8));
     $dbFunctions->atualizarDadosUser($nome,$email,$nome2,$email2,$newhash);
 }
+if(isset($_POST['Exit'])){
+    //inexistente
+    echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/logout.php"</script>';
+}
+if(isset($_POST['Change'])){
+    //inexistente
+    echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/update.php"</script>';
+}
 
 ?>
 </body>

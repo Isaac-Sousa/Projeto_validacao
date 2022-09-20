@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="styleUser.css">
     <title>Perfil</title>
 </head>
-<body>
+<div>
 <?php
 $host = 'localhost';
 $port = '5432';
@@ -34,7 +34,7 @@ if ($row = pg_fetch_array($results)) {
 
 <br>
 <br>
-
+    <h> Dados da conta </h>
 <div>
 <table>
  <tr class="TLs">
@@ -49,15 +49,17 @@ if ($row = pg_fetch_array($results)) {
 </div>
 <?php
 }else{
-echo "<script>window.alert('O código chegou até aqui')</script>";
+echo "<script>window.alert('Faça Login para ver essa página')</script>";
+    echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.php"</script>';
 }
     ?>
-<form method="" action="styleL.css">
+<div class="flexo"
+<form method="" action="process.php">
 <div class="btns">
-    <button class="b1" type="submit" id="register" name="Send">Enviar</button>
-    <button class="b2" type="reset" id="delet" name="erase">Limpar</button>
+    <button class="b1" type="submit" id="register" name="Exit">Logout</button>
+    <button class="b2" type="reset" id="delet" name="Change" >Atualizar</button>
 </div>
 </form>
-
+</div>
 </body>
 </html>
