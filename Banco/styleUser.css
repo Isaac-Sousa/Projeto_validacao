@@ -50,26 +50,28 @@ h{
     display: flex;
 
 }button {
-     margin-top: 100px;
+    margin-top: 95px;
      display: inline-block;
-     color: rgb(251, 255, 252);
-     background-image: linear-gradient(to right, rgb(49, 231, 167), rgb(8, 206, 129));
-     width: 90px;
+     color: black;
+     background-color: #11d5b7;
+     width: 70px;
      height: 30px;
      border-radius: 10px;
      border: none;
-     padding: 6px 8px;
+     padding: 4px 4px;
      font-size: 15px;
      border-spacing: 3px;
      cursor: pointer;
+    justify-content: space-around;
  } .b1 {
-      margin-top: 210px;
-       margin-left: 60%;
-       float: right;
-
+       margin-left: 20px;
+        position: relative;
+   justify-content: center;
+        text-align: center;
    }
 .b2{
-    margin-top: 130px;
-    margin-left: 70px;
-    float: right;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+ margin-left: 30px;
 }

@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="styleUser.css">
     <title>Perfil</title>
 </head>
-<div>
+
 <?php
 $host = 'localhost';
 $port = '5432';
@@ -27,11 +27,18 @@ if ($row = pg_fetch_array($results)) {
     //TODO - Tabela não aparece; Resultados não são postos a amostra; Session vindo nulo
 
 ?><div>
-<dic class="retangulo"></dic>
+<div class="retangulo"></div>
 <div class="circulo"></div>
 <h1>   <?php echo $row['nome_user']; ?> </h1>
   </div>
-
+   - <div class="flexo">
+        <form method="post" action="process.php">
+            <div class="btns">
+                <button class="b1" type="submit" name="Exit">Logout</button>
+                <button class="b2" type="submit" name="Change" >Atualizar</button>
+            </div>
+        </form>
+   - </div>
 <br>
 <br>
     <h> Dados da conta </h>
@@ -53,13 +60,6 @@ echo "<script>window.alert('Faça Login para ver essa página')</script>";
     echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.php"</script>';
 }
     ?>
-<div class="flexo"
-<form method="" action="process.php">
-<div class="btns">
-    <button class="b1" type="submit" id="register" name="Exit">Logout</button>
-    <button class="b2" type="reset" id="delet" name="Change" >Atualizar</button>
-</div>
-</form>
-</div>
+
 </body>
 </html>
