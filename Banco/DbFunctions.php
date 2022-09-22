@@ -41,7 +41,7 @@ class DbFunctions
      */
     public function deletarUsuario($nome, $email)
     {
-        $duplicate = pg_query($this->conn, "SELECT * FROM usuario WHERE Nome_user = '$nome' OR Email_user = '$email'");
+        $duplicate = pg_query($this->conn, "SELECT * FROM usuario WHERE Nome_user = '$nome' AND Email_user = '$email'");
         if (pg_num_rows($duplicate) >= 1) {
             echo "<script>alert('Removendo o usuário)</script>";
             $delet = pg_query("DELETE FROM usuario WHERE Nome_user = '$nome'") or die (pg_result_error($this->conn));
@@ -58,10 +58,10 @@ class DbFunctions
     {
         $results = pg_query($this->conn, "SELECT * FROM usuario");
         while ($row = pg_fetch_array($results)) {
-            echo $row['id_user']."-";
-            echo $row['nome_user'] . "<br>";
-            echo $row['email_user'] . "<br>";
-            echo $row['senha_user'] . "<br>";
+             $row['id_user']."-";
+             $row['nome_user'] . "<br>";
+             $row['email_user'] . "<br>";
+             $row['senha_user'] . "<br>";
         }
     }
     /**
