@@ -27,7 +27,7 @@ while ($row = pg_fetch_array($results)) {
 
 }
 
-
+// Tudo foi concluido em tese!
 
 ?>
 

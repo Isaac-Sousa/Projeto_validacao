@@ -12,11 +12,15 @@ body {
     padding: 15px;
     padding-bottom: 115px;
     border-radius: 15px;
-    width: 20%;
-    height: 25%;
+    min-width: 300px;
+    max-width: 800px;
+    max-height: 250px;
+
 }
 fieldset{
     border: 3px solid rgb(15, 80, 219);
+    min-width: 300px;
+    max-width: 800px;
 }
 legend{
     border:1px solid rgb(58, 121, 213);
@@ -25,7 +29,7 @@ legend{
     background-color: rgb(15, 165, 219);
     color: white;
     border-radius: 8px;
-    
+
 }
 .inputBox{
     position: relative;
@@ -37,7 +41,8 @@ legend{
     outline: none;
     color:white;
     font-size: 15px;
-    width: 100%;
+    min-width: 300px;
+    max-width: 1000px;
 }
 .Luser{
     position: absolute;
@@ -60,37 +65,39 @@ h1 {
     display: flex;
 }
 button{
-       margin-top:30px ;
-       display: inline-block;
-       color:rgb(251, 255, 252);
-       background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
-       width: 40%;
-       height: 30px;
-       border-radius: 10px;
-       border: none;
-       padding: 6px 15px;
-       font-size: 15px;
-       border-spacing: 3px;
-       cursor:pointer;
-   }
- .b1 {
-   margin-bottom: 10px;
+    margin-top:30px ;
+    display: inline-block;
+    color:rgb(251, 255, 252);
+    background-image:linear-gradient(to right,rgb(219, 15, 15), rgb(170, 24, 24));
+    width: 40%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 6px 15px;
+    font-size: 15px;
+    border-spacing: 3px;
+    cursor:pointer;
+}
+.b1 {
+    margin-bottom: 10px;
     float: left;
-   
- }
- .b2{
+
+}
+.b2{
     margin-left: 70px;
     float:right
- }
+}
 a {
-    position: absolute;
+    position: relative;
+    justify-content: center;
     top:73%;
-    left:50%;
-    transform: translate(-50%,-75%);
+    left: 25%;
+
+
     outline: none;
 }
 a:link{
-    color: darkred;
+    color: #40c5f6;
     text-decoration: none;
 }
 a:visited{
@@ -98,10 +105,27 @@ a:visited{
     text-decoration: none;
 }
 a:hover{
+    color: #81f65b;
+    text-decoration: none;
+}
+a:active {
     color: #4d42f6;
     text-decoration: none;
 }
-a:active{
-    color: #81f65b;
-    text-decoration: none;
+@media (max-width: 400px){
+    .caixa{
+        color:white;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        padding-bottom: 150px;
+        border-radius: 15px;
+        min-width: 300px;
+        max-width: 800px;
+        max-height: 250px;
+
+    }
 }
