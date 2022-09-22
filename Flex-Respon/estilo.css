@@ -1,108 +1,62 @@
+body{
+    background: #94e1f6;
+}
 
-fieldset{
-    border: 3px solid blue;
-}
-legend{
-    border:1px solid blue;
-    padding: 10px;
-    text-align: center;
-    background-color: blue;
-    color: white;
-    border-radius: 8px;
-
-}
-.inputBox{
-    position: relative;
-}
-.inputuser{
-    background: none;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    color:white;
-    font-size: 15px;
-    width: 100%;
-}
-.Luser{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    pointer-events: none;
-    transition: .5s;
-}
-.inputuser:focus ~ .Luser, .inputuser:valid ~ .Luser{
-    top: -20px;
-    font-size: 12px;
-    color:rgb(4, 4, 4);
-}
-h1 {
-    position: relative;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-}
-.btns{
+.menu{
     display: flex;
-}
-button{
-    margin-top:30px ;
-    display: inline-block;
-    color:rgb(251, 255, 252);
-    background-image:linear-gradient(to right,rgb(12, 206, 223), rgb(15, 231, 217));
-    width: 40%;
-    height: 30px;
+    place-content: flex-start;
+    flex-flow: row-reverse;
+    background-color: #40c5f6;
     border-radius: 10px;
-    border: none;
-    padding: 6px 15px;
-    font-size: 15px;
-    border-spacing: 3px;
-    cursor:pointer;
-}
-.b1 {
-    margin-bottom: 10px;
-    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
 }
-.b2{
-    margin-left: 70px;
-    float:right
+.redirect{
+    color: #878787;
+    padding-right: 10px;
+
 }
-a {
-    position: absolute;
-    top:73%;
-    left:50%;
-    transform: translate(-50%,-75%);
-    outline: none;
+h1{
+    text-align: center;
+}
+p{
+    font-size: larger;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 a:link{
-    color: #40c5f6;
+    color: #878787;
     text-decoration: none;
 }
 a:visited{
-    color: #40c5f6;
+    color: #878787;
     text-decoration: none;
 }
 a:hover{
-    color: #81f65b;
+    color: #878787;
     text-decoration: none;
 }
-a:active {
-    color: #4d42f6;
+a:active{
+    color: #878787;
     text-decoration: none;
 }
-@media (max-width: 400px){
-    .caixa{
-        color:white;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 15px;
-        padding-bottom: 150px;
-        border-radius: 15px;
-        min-width: 300px;
-        max-width: 800px;
-        max-height: 250px;
 
-    }
+
+
+
+nav{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    width: 100%;
+}
+.navy{
+    color: black;
+    background-color: #94e1f6;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    width: 100%;
+    height: 28px;
+    gap: 40px;
+
 }

@@ -9,17 +9,31 @@
 </head>
 <body>
 <h1>HomePage</h1>
-<div class="menu">
-<div>
-  <a href="LOGIN.php" size="4" class="redirect"><label>Login</label>
-</div>
-<div>   
-  <a href="CADASTRO.php" size="4" class="redirect"><label>Cadastrar</label></a>
-</div>
-<div>
-  <a href="USERS.php" class="redirect"><label>Verificar usuários</label></a>
-</div>
-</div>   <!-- Container -->
+  <header>
+      <nav class="navy">
+          <a href="LOGIN.php" size="4" class="redirect">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"></path>
+                  <path d="M20 12h-13l3 -3m0 6l-3 -3"></path>
+              </svg>
+           </a>
+          <a href="CADASTRO.php" size="4" class="redirect">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+              </svg>
+
+          </a>
+
+          <a href="USERS.php" class="redirect">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+              </svg>
+          </a>
+      </nav>
+  </header>
+
+  <!-- Container -->
 <p>Basta selecionar a operação que quer.<br>
 Login: se tiver um usuário já alocado dentro do banco você irá para o seu perfil;<br>
 Cadastro: crie seu usuário para poder acessar seu perfil.<br>
