@@ -15,7 +15,7 @@ td{
 }
 .circulo{
     position: absolute;
-    background-color: darkblue;
+    background-color: #be6a2a;
     height: 100px;
     width: 100px;
     left: 45%;
@@ -41,13 +41,15 @@ h{
     position: absolute;
     background-color: #11d5b7;
     height: 150px;
-    width: 98%;
+    width:100%;
     margin-bottom: 98%;
     border-radius: 20px;
 
 }
 .flexo{
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
 }button {
     margin-top: 95px;
@@ -55,23 +57,35 @@ h{
      color: black;
      background-color: #11d5b7;
      width: 70px;
-     height: 30px;
-     border-radius: 10px;
-     border: none;
+     height: 50px;
+     border-radius: 0px;
+     border-left: #231831;
+     border-top: #11D5B7FF;
+     border-right: #11D5B7FF;
+     border-bottom-color: black;
      padding: 4px 4px;
      font-size: 15px;
      border-spacing: 3px;
      cursor: pointer;
     justify-content: space-around;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
  } .b1 {
+       margin-top: 100px;
        margin-left: 20px;
         position: relative;
    justify-content: center;
         text-align: center;
    }
 .b2{
+    margin-top: 100px;
     position: relative;
     justify-content: center;
     text-align: center;
  margin-left: 30px;
+}
+.icon-user{
+   position: absolute;
+    left: 864px;
+    top: 25px;
+
 }
