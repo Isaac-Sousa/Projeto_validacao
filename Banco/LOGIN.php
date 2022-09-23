@@ -36,9 +36,11 @@
 <h1>Todos os campos são obrigatórios</h1>
 
   </fieldset>
+       <p> </p>
+       <a href="CADASTRO.php">Não tem uma conta ainda?</a>
     </form>
 </div>
-<a href="CADASTRO.php">Não tem uma conta ainda?</a>
+
 
 <?php
 

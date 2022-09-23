@@ -37,8 +37,8 @@
    </div>
 <h1>Todos os campos são obrigatórios</h1>
   </fieldset>
-       <p>       </p>
-       <a href="CADASTRO.php">Já tem uma conta ainda?</a>
+       <p> </p>
+       <a href="LOGIN.php">Já tem uma conta ainda?</a>
     </form>
 </div>
 </body>
