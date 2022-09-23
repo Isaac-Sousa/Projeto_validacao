@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Table_users.css">
+    <link rel="stylesheet" type="text/css" href="test.css">
 
 </head>
 <body>
 <table>
     <thead>
     <tr>
+        <th><b>Id</b></th>
         <th><b>Nome</b></th>
         <th><b>Email</b></th>
         <th><b>Senha</b></th>
@@ -38,6 +39,7 @@ if($i<count($row)){
 
     <tbody>
     <tr>
+        <td value="<?=$i;?>"> <?=$row['id_user']; ?> </td>
         <td value="<?=$i;?>"> <?=$row['nome_user']; ?> </td>
         <td value="<?=$i;?>"> <?=$row['email_user']; ?> </td>
         <td value="<?=$i;?>"> <?=$row['senha_user']; ?> </td>

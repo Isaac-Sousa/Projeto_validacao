@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-itens: center;
     font-size: 0.9rem;
-    background-color:#878787;
+
 }
 
 table{
@@ -19,6 +19,8 @@ table{
 }
 thead {
     box-shadow: #000000FF 0 10px 10px -10px;
+
+
 }
 
 th {
@@ -31,6 +33,4 @@ th {
 
 td {
     padding: 1rem 2rem;
-
-
 }

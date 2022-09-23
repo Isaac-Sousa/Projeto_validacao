@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+     font-family:Mukuta, sans-serif;
+     height:100%;
+     display:grid;
+     justify-content: center;
+     align-itens: center;
+     font-size: 0.9rem;
+     color:white;
+
+ }
+
+table{
+    border: 1px solid white;
+    border-collapse:collapse;
+
+    background-color:black;
+    text-align:center;
+    overflow:hidden;
+    transform: translate(5%,100%);
+
+}
+thead {
+    border-left:1px solid white;
+}
+
+th {
+    border-left: 1px solid white;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+td {
+    padding: 1rem 2rem;
+    border-left: 1px solid white;
+}
