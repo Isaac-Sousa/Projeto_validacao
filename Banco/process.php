@@ -31,8 +31,11 @@ if(isset($_POST['Exit'])){
     echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/logout.php"</script>';
 }
 if(isset($_POST['Change'])){
-    //funcional "'
+
     echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/update.php"</script>';
+}
+if(isset($_POST['Delete'])){
+  $dbFunctions->deletarUsuario($nome,$email);
 }
 
 ?>
