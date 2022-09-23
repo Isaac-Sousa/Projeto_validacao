@@ -35,6 +35,9 @@ if(isset($_POST['Change'])){
     echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/update.php"</script>';
 }
 if(isset($_POST['Delete'])){
+    echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/Delet.php"</script>';
+}
+if(isset($_POST['SUB_DELET'])){
   $dbFunctions->deletarUsuario($nome,$email);
 }
 

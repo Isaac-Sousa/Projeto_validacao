@@ -43,7 +43,7 @@ class DbFunctions
     {
         $duplicate = pg_query($this->conn, "SELECT * FROM usuario WHERE Nome_user = '$nome' AND Email_user = '$email'");
         if (pg_num_rows($duplicate) >= 1) {
-            echo "<script>alert('Removendo o usuário)</script>";
+            echo "<script>alert('Removendo o usuário')</script>";
             $delet = pg_query("DELETE FROM usuario WHERE Nome_user = '$nome'") or die (pg_result_error($this->conn));
         } else {
             echo '<script>alert("Não foi possivél deletar  \nUsuário inexistente")</script>';
