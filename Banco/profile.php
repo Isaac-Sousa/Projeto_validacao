@@ -53,7 +53,7 @@ if ($row = pg_fetch_array($results)) {
     <h> Dados da conta </h>
 <div>
 <table>
- <tr class="TLs">
+ <tr>
   <td>
    <b>Email: </b>
   </td>
