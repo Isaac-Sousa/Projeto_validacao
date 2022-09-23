@@ -32,7 +32,7 @@ class DbFunctions
         } else {
             $insert = pg_query($this->conn, "INSERT INTO usuario (nome_user, email_user, senha_user) VALUES('$nome','$email','$hash')") or die (pg_result_error($this->conn));
             echo "<script>alert('User cadastrado!')</script>";
-            echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/CADASTRO.php"</script>';
+            echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.php"</script>';
         }
     }
 
@@ -75,6 +75,9 @@ class DbFunctions
         $id = $row['id_user'];
         $UP = pg_query($this->conn,"UPDATE usuario SET nome_user ='$nome2', email_user ='$email2', senha_user ='$newhash' WHERE ID_user='$id'");
         echo "<script>alert('Usuário atualizado!')</script>";
+            echo "<script>alert('Logue novamente')</script>";
+            echo '<script>window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/LOGIN.php"</script>';
+
         }
     }
 

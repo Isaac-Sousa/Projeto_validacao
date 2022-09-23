@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Usuarios_tabela</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>???</title>
+    <link rel="stylesheet" type="text/css" href="Table_users.css">
+
 </head>
 <body>
-
+<table>
+    <thead>
+    <tr>
+        <th><b>Nome</b></th>
+        <th><b>Email</b></th>
+        <th><b>Senha</b></th>
+    </tr>
+    </thead>
 
 <?php
 //Conectando ao banco DE NOVO
@@ -21,27 +30,25 @@ $perfil = pg_connect($C_String) or die("Banco indisponível");
 //
 
 $results = pg_query($perfil, "SELECT * FROM usuario");
-if ($row = pg_fetch_array($results)) {
+while ($row = pg_fetch_array($results)) {
+$i=1;
+if($i<count($row)){
 
-for ($i=0;$i<count($row);$i++){
 ?>
-<table>
-    <colgroup span="3"></colgroup>
-    <tr>
-        <th><b>Nome</b></th>
-        <th><b>Email</b></th>
-        <th><b>Senha</b></th>
-    </tr>
+
+    <tbody>
     <tr>
         <td value="<?=$i;?>"> <?=$row['nome_user']; ?> </td>
         <td value="<?=$i;?>"> <?=$row['email_user']; ?> </td>
         <td value="<?=$i;?>"> <?=$row['senha_user']; ?> </td>
     </tr>
-</table>
+    </tbody>
+
 <?php
+    $i++;
 }
 }
 ?>
-
+</table>
 </body>
 </html>

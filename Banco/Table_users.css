@@ -1,0 +1,37 @@
+body{
+    font-family:Mukuta, sans-serif;
+    height:100%;
+    display:grid;
+    justify-content: center;
+    align-itens: center;
+    font-size: 0.9rem;
+    background-color:#878787;
+}
+
+table{
+    border-collapse:collapse;
+    box-shadow: #000000FF 0 10px 10px -10px;
+    background-color:white;
+    text-align:center;
+    overflow:hidden;
+    transform: translate(5%,100%);
+
+}
+thead {
+    box-shadow: #000000FF 0 10px 10px -10px;
+    border-radius: 10px;
+}
+
+th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+td {
+    padding: 1rem 2rem;
+
+
+}
