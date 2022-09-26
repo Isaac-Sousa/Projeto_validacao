@@ -17,7 +17,7 @@ class DbFunctions
         $user = 'postgres';
         $password = 'admin';
         $dbname = 'test_db';
-        $C_String = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password}";
+        $C_String = "host=$host port=$port dbname=$dbname user=$user password=$password";
         $this->conn = pg_connect($C_String) or die("Banco indisponível");
     }
 
@@ -95,22 +95,5 @@ class DbFunctions
             }
         }
         }
-
-   // não funcional - excluir depois
-    public function selecionarUsuario($nome,$email){
-
-        $results = pg_query($this->conn, "SELECT * FROM usuario WHERE nome_user='$nome' AND email_user='$email'");
-       $row = $results->fetch_array();
-              $_SESSION['id']=$row['id_user'];
-              headers('location:profile.php');
-              exit;
-
-
-
-    }
-
-
-
-
 
 }
