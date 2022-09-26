@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="test.css"> <!--Existe outro modelo de tabela, caso queira verificar, troque TEST.CSS por TABLE_USER.CSS, seus layouts e cores se diferem -->
 
 </head>
 <body>
@@ -28,7 +28,6 @@ $password = 'admin';
 $dbname = 'test_db';
 $C_String = "host={$host} port={$port} dbname={$dbname} user={$user} password={$password}";
 $perfil = pg_connect($C_String) or die("Banco indisponível");
-//
 
 $results = pg_query($perfil, "SELECT * FROM usuario");
 while ($row = pg_fetch_array($results)) {
